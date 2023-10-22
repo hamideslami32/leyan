@@ -5,14 +5,14 @@ import Link from "next/link"
 const LoginForm = () => {
   return (
     <div className="w-[400px] h-[423px] border p-4">
-        <span className="text-3xl font-bold">پالیـــزبــــان</span>
+        <div className="text-3xl font-bold text-center mt-4">پالیـــزبــــان</div>
         <div className="mt-16">
-            <span>ورود یا ثبت‌نام</span>
-            <p>برای ورود یا ثبت نام شماره موبایل خود را وارد کنید.</p>
+            <div className="text-lg font-bold mb-2">ورود یا ثبت‌نام</div>
+            <p className="mb-10 text-sm">برای ورود یا ثبت نام شماره موبایل خود را وارد کنید.</p>
             <Textfield placeholder="شماره موبایل خود را وارد کنید" />
-            <Button className="w-full bg-black text-white">ادامه</Button>
-            <p>
-                <span>ورود یا ثبت‌نام شما به منظور پذیرش <Link href='/'>شرایط و قوانین پالیزبان</Link> است</span>
+            <Button className="w-full bg-black text-white my-6">ادامه</Button>
+            <p className="text-sm">
+                <span>ورود یا ثبت‌نام شما به منظور پذیرش <Link href='/' className="text-blue-500">شرایط و قوانین پالیزبان</Link> است</span>
             </p>
         </div>
     </div>

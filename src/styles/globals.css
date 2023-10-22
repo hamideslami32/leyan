@@ -2,3 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: peyda;
+  src: url('/fonts/PeydaWeb/woff2/PeydaWebFaNum-Regular.woff2');
+  font-display: auto;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: peyda;
+  src: url('/fonts/PeydaWeb/woff2/PeydaWebFaNum-Bold.woff2');
+  font-display: auto;
+  font-weight: bold;
+}
+
+* {
+  font-family: peyda;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
