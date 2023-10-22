@@ -2,7 +2,7 @@ import Button from "@/components/shared/ui/button/Button"
 import Textfield from "@/components/shared/ui/textfield/Textfield"
 import Link from "next/link"
 
-const LoginForm = () => {
+const PhoneNumberForm = () => {
   return (
     <div className="w-[400px] h-[423px] border p-4">
         <div className="text-3xl font-bold text-center mt-4">پالیـــزبــــان</div>
@@ -19,4 +19,4 @@ const LoginForm = () => {
   )
 }
 
-export default LoginForm
+export default PhoneNumberForm
