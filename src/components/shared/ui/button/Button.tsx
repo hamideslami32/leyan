@@ -7,8 +7,8 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<Variants, string> = {
-  normal: "!bg-black !text-white",
-  outlined: "!border-black border",
+  normal: "bg-black text-white hover:bg-gray-700",
+  outlined: "border-black border hover:bg-gray-100",
   icon: "!px-0",
 };
 
