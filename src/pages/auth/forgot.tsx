@@ -5,7 +5,7 @@ import NewPasswordForm from "@/components/pages/auth/new-password-form/NewPasswo
 const Forgot = () => {
   return (
     <div className="w-full min-h-screen flex justify-center items-center">
-        {/* <ForgotForm /> */}
+        <ForgotForm />
         <NewPasswordForm />
     </div>
   )
