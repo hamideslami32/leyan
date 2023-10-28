@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { ButtonHTMLAttributes } from "react";
 
-type Variants = "normal" | "outlined" | "icon";
+type Variants = "normal" | "outlined" | "icon" | "text";
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variants;
 }
@@ -10,6 +10,7 @@ const variantStyles: Record<Variants, string> = {
   normal: "bg-black text-white hover:bg-gray-700",
   outlined: "border-black border hover:bg-gray-100",
   icon: "!px-0",
+  text: "",
 };
 
 const Button = (props: ButtonProps) => {
