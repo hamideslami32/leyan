@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Categories from "@/components/pages/home/categories/Categories";
 import PopularCards from "@/components/pages/home/popular-cards/PopularCards";
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
       <img src="/images/home/banner.png" alt="banner" className="rounded-lg"  />
     </div>
     <PopularCards />
+    <Categories />
   </div>
 };
 
