@@ -22,14 +22,18 @@ const MainMenu = () => {
             </Button>
             <span className="text-lg">دسته‌بندی کالاها</span>
           </div>
-          <div className="flex">
-            {links.map((item, index) => (
-              <Link href={item.link} key={index} className="ml-3 text-gray-400">
-                {item.icon}
-                {item.title}
-              </Link>
-            ))}
-          </div>
+          <nav>
+            <ul className="flex">
+              {links.map((item, index) => (
+                <li key={index}>
+                  <Link href={item.link} className="ml-3 text-gray-400">
+                    {item.icon}
+                    <span className="mr-2">{item.title}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
         <Button className="flex items-center" variant="text">
           <LocationIcon />

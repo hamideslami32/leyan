@@ -19,7 +19,7 @@ const SearchBar = () => {
   return (
     <div
       className={classNames(
-        "flex items-center border border-transparent pr-4 h-12 w-[600px] text-sm bg-gray-200 placeholder:text-gray-600 rounded-md",
+        "flex items-center border border-transparent pr-4 h-12 w-full max-w-[600px] text-sm bg-gray-200 placeholder:text-gray-600 rounded-md",
         isFocus && "!border-black"
         )}
     >

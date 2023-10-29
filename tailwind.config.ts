@@ -15,7 +15,9 @@ const config: Config = {
       "2xl": "14400px",
     },
     borderRadius: {
-      'md': '4px'
+      'md': '4px',
+      'lg': '8px',
+      'xl': '16px'
     },
     extend: {
       backgroundImage: {
