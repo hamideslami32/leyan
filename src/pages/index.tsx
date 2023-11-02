@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import BestSellers from "@/components/pages/home/best-sellers/BestSellers";
 import Categories from "@/components/pages/home/categories/Categories";
 import PopularCards from "@/components/pages/home/popular-cards/PopularCards";
 
@@ -9,6 +10,7 @@ const Home = () => {
     </div>
     <PopularCards />
     <Categories />
+    <BestSellers />
   </div>
 };
 
