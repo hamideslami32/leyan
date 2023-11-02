@@ -21,9 +21,9 @@ const ProductCard = () => {
             <StarFilledIcon />
           </span>
         </div> */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between">
             {/* TODO // change bg-red-500 and add color pallete */}
-            <div className="bg-red-500 px-3 py-1 rounded-xl text-xs text-white">۱۲٪</div>
+            <span className="h-6 bg-red-500 px-3 py-1 rounded-xl text-xs text-white">۱۲٪</span>
             <div className="flex flex-col">
                 <span className="text-sm"><span className="text-xl ml-1 font-bold">۲۸,۰۰۰</span>تومان</span>
                 <span className="text-gray-600 line-through">۳۵,۵۰۰</span>
