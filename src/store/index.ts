@@ -5,16 +5,16 @@ import {
 } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
 import userSlice from "./slices/user";
-import { locationApi } from "@/apis/shared/location";
+// import { locationApi } from "@/apis/shared/location";
 
 const makeStore = () => {
   return configureStore({
     reducer: {
       [userSlice.name]: userSlice.reducer,
-      [locationApi.reducerPath]: locationApi.reducer,
+      // [locationApi.reducerPath]: locationApi.reducer,
     },
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(locationApi.middleware),
+    // middleware: (getDefaultMiddleware) =>
+    //   getDefaultMiddleware().concat(locationApi.middleware),
     devTools: true,
   });
 };

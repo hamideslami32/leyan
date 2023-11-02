@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const FooterContact = () => {
   return (
-    <div className="flex-1 flex flex-col gap-4">
+    <div className="flex-1 flex flex-col gap-4 mr-16">
       <div className="font-bold text-lg">
         هفت روز هفته، میزبان صدای گرم شما هستیم!
       </div>

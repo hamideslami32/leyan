@@ -1,19 +1,36 @@
 /* eslint-disable @next/next/no-img-element */
-import BestSellers from "@/components/pages/home/best-sellers/BestSellers";
+import BestSellers, { products } from "@/components/pages/home/best-sellers/BestSellers";
 import Categories from "@/components/pages/home/categories/Categories";
 import PopularCards from "@/components/pages/home/popular-cards/PopularCards";
+import CustomCarousel from "@/components/shared/custom-carousel/CustomCarousel";
+import ProductCard from "@/components/shared/product-card/ProductCard";
+import Swiper from "@/components/shared/swiper/Swiper";
 import Image from "next/image";
 import Link from "next/link";
+import { ReactNode, useMemo } from "react";
 
 const Home = () => {
-  return (
-    <div className="w-full max-w-screen-xl mx-auto">
-      <div className="h-[400px] my-6 bg-blue-200 rounded-lg">
+  const renderedDataCustomSlider: ReactNode[] = useMemo(() => {
+    return products.map((product, i) => (
+      <ProductCard productData={product} key={i} showRating />
+    ));
+  }, []);
+  const firstSliderData: ReactNode[] = useMemo(() => {
+    return [...new Array(5)].map((_, i) => (
+      <div key={i} className="h-[400px]">
         <img
           src="/images/home/banner.png"
           alt="banner"
           className="rounded-lg"
         />
+      </div>
+    ));
+  }, []);
+
+  return (
+    <div className="w-full max-w-screen-xl mx-auto">
+      <div className="my-8 rounded-lg">
+        <Swiper data={firstSliderData} showNavigation showPagination />
       </div>
       <PopularCards />
       <Categories />
@@ -38,6 +55,8 @@ const Home = () => {
           />
         </Link>
       </div>
+      <CustomCarousel title={'تخفیف های ویژه'} link={'/'} data={renderedDataCustomSlider} />
+      <CustomCarousel title={'بر اساس بازدید های شما'} link={'/'} data={renderedDataCustomSlider} />
     </div>
   );
 };
