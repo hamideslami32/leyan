@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
-import { createPortal } from "react-dom";
-import useMounted from "./hooks/useMounted";
+import { ReactNode } from 'react';
+import { createPortal } from 'react-dom';
+import useMounted from './hooks/useMounted';
 
 interface PortalProps {
   children?: ReactNode;

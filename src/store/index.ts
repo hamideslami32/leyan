@@ -1,10 +1,6 @@
-import {
-  configureStore,
-  ThunkAction,
-  Action,
-} from "@reduxjs/toolkit";
-import { createWrapper } from "next-redux-wrapper";
-import userSlice from "./slices/user";
+import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { createWrapper } from 'next-redux-wrapper';
+import userSlice from './slices/user';
 // import { locationApi } from "@/apis/shared/location";
 
 const makeStore = () => {
@@ -20,7 +16,7 @@ const makeStore = () => {
 };
 
 export type AppStore = ReturnType<typeof makeStore>;
-export type AppState = ReturnType<AppStore["getState"]>;
+export type AppState = ReturnType<AppStore['getState']>;
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   AppStore,
