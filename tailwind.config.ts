@@ -1,4 +1,4 @@
-import * as colors from '@/theme/index';
+import * as colors from './src/theme';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
