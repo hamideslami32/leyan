@@ -17,8 +17,9 @@ const Home = () => {
       <ProductCard productData={product} key={i} showRating />
     ));
   }, []);
+
   const firstSliderData: ReactNode[] = useMemo(() => {
-    return [...new Array(5)].map((_, i) => (
+    return Object.keys(new Array(5)).map((_, i) => (
       <div key={i} className='h-[400px]'>
         <img
           src='/images/home/banner.png'
@@ -30,43 +31,45 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='w-full max-w-cs mx-auto'>
-      <div className='my-8 rounded-lg'>
-        <Swiper data={firstSliderData} showNavigation showPagination />
+    <div className='p-6'>
+      <div className='w-full max-w-cs mx-auto'>
+        <div className='my-8 rounded-lg'>
+          <Swiper data={firstSliderData} showNavigation showPagination />
+        </div>
+        <PopularCards />
+        <Categories />
+        <BestSellers />
+        <div className='flex justify-between my-10'>
+          <Link href='/'>
+            <Image
+              height='248'
+              width='588'
+              src='/images/home/middle-banner.png'
+              alt='banner'
+              className='rounded-lg'
+            />
+          </Link>
+          <Link href='/'>
+            <Image
+              height='248'
+              width='588'
+              src='/images/home/middle-banner-2.png'
+              alt='banner'
+              className='rounded-lg'
+            />
+          </Link>
+        </div>
+        <CustomCarousel
+          title={'تخفیف های ویژه'}
+          link={'/'}
+          data={renderedDataCustomSlider}
+        />
+        <CustomCarousel
+          title={'بر اساس بازدید های شما'}
+          link={'/'}
+          data={renderedDataCustomSlider}
+        />
       </div>
-      <PopularCards />
-      <Categories />
-      <BestSellers />
-      <div className='flex justify-between my-10'>
-        <Link href='/'>
-          <Image
-            height='248'
-            width='588'
-            src='/images/home/middle-banner.png'
-            alt='banner'
-            className='rounded-lg'
-          />
-        </Link>
-        <Link href='/'>
-          <Image
-            height='248'
-            width='588'
-            src='/images/home/middle-banner-2.png'
-            alt='banner'
-            className='rounded-lg'
-          />
-        </Link>
-      </div>
-      <CustomCarousel
-        title={'تخفیف های ویژه'}
-        link={'/'}
-        data={renderedDataCustomSlider}
-      />
-      <CustomCarousel
-        title={'بر اساس بازدید های شما'}
-        link={'/'}
-        data={renderedDataCustomSlider}
-      />
     </div>
   );
 };
