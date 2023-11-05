@@ -30,7 +30,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='w-full max-w-screen-xl mx-auto'>
+    <div className='w-full max-w-cs mx-auto'>
       <div className='my-8 rounded-lg'>
         <Swiper data={firstSliderData} showNavigation showPagination />
       </div>

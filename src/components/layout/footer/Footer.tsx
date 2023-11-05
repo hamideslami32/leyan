@@ -33,7 +33,7 @@ const Footer = () => {
         ))}
       </div>
       <div>
-        <div className='max-w-[1200px] mx-auto my-6'>
+        <div className='max-w-cs mx-auto my-6'>
           <div className='flex'>
             <FooterLinks />
             <FooterContact />
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='flex items-center h-12 bg-gray-100'>
-        <div className='max-w-screen-lg mx-auto text-center text-sm text-gray-600'>
+        <div className='max-w-cs mx-auto text-center text-sm text-gray-600'>
           کلیه حقوق این سایت متعلق به شرکت نوژن گستر گیل (پالیزبان) است و هر
           گونه سواستفاده از آن پیگیری قانونی خواهد داشت.
           <span className='mr-2'>{`version: ${version}`}</span>

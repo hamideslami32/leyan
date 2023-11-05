@@ -75,7 +75,7 @@ const BestSellers = () => {
     <ProductCard key={index} productData={product} />
   ));
   return (
-    <div className='my-8 relative max-w-[1200px] overflow-x-hidden'>
+    <div className='my-8 relative max-w-cs overflow-x-hidden'>
       <Image
         width='1200'
         height='320'

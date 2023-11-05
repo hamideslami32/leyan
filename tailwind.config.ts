@@ -15,8 +15,8 @@ const config: Config = {
         lg: '8px',
         xl: '16px',
       },
-      screens: {
-        '2xl': '1440px',
+      maxWidth: {
+        cs: '1200px',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

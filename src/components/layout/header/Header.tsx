@@ -11,7 +11,7 @@ const Header = () => {
   const { width } = useWindowSize();
   return (
     <header className='py-4 border-b border-gray-300 px-2 md:px-0'>
-      <div className='flex justify-between mx-auto w-full max-w-screen-xl'>
+      <div className='flex justify-between mx-auto w-full max-w-cs'>
         <div className='flex flex-1 items-center'>
           {width > 768 && (
             <Link href='/' className='ml-6 flex items-center'>
