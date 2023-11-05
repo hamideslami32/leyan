@@ -1,4 +1,5 @@
-import type { Config } from 'tailwindcss'
+import * as colors from './src/theme';
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -7,19 +8,16 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    screens: {
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1200px",
-      "2xl": "14400px",
-    },
-    borderRadius: {
-      'md': '4px',
-      'lg': '8px',
-      'xl': '16px'
-    },
     extend: {
+      colors: colors,
+      borderRadius: {
+        md: '4px',
+        lg: '8px',
+        xl: '16px',
+      },
+      maxWidth: {
+        cs: '1200px',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -28,5 +26,5 @@ const config: Config = {
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

@@ -1,4 +1,4 @@
-import { LayoutProps } from ".";
+import { LayoutProps } from '.';
 
 const empty = (props: LayoutProps) => {
   const { children } = props;

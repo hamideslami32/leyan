@@ -1,13 +1,13 @@
-import LayoutLoader, { TLayout } from "@/layouts";
-import "@/styles/globals.css";
-import { NextPageContext } from "next";
-import type { AppProps } from "next/app";
+import LayoutLoader, { TLayout } from '@/layouts';
+import '@/styles/globals.css';
+import { NextPageContext } from 'next';
+import type { AppProps } from 'next/app';
 
 interface CustomAppProps extends NextPageContext {
-  Component: AppProps["Component"] & {
+  Component: AppProps['Component'] & {
     layout?: TLayout;
   };
-  pageProps: AppProps["pageProps"];
+  pageProps: AppProps['pageProps'];
 }
 
 export default function App({ Component, pageProps }: CustomAppProps) {

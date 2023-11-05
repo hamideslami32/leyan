@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { HYDRATE } from "next-redux-wrapper";
-import { AppState } from "..";
+import { createSlice } from '@reduxjs/toolkit';
+import { HYDRATE } from 'next-redux-wrapper';
+import { AppState } from '..';
 
 const initialState = {
-  username: "monire",
-  phone: "",
-  email: "",
+  username: 'monire',
+  phone: '',
+  email: '',
 };
 
 const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState,
   reducers: {
     setUsername(state, action) {
@@ -19,8 +19,8 @@ const userSlice = createSlice({
   extraReducers: {
     [HYDRATE]: (state, action) => {
       return {
-          ...state,
-          ...action.payload.user,
+        ...state,
+        ...action.payload.user,
         // username: 'hamid'
       };
     },

@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: peyda;
-  src: url("/fonts/PeydaWeb/woff2/PeydaWebFaNum-Regular.woff2");
+  src: url('/fonts/PeydaWeb/woff2/PeydaWebFaNum-Regular.woff2');
   font-display: auto;
   font-weight: normal;
 }
 
 @font-face {
   font-family: peyda;
-  src: url("/fonts/PeydaWeb/woff2/PeydaWebFaNum-Bold.woff2");
+  src: url('/fonts/PeydaWeb/woff2/PeydaWebFaNum-Bold.woff2');
   font-display: auto;
   font-weight: bold;
 }
@@ -28,10 +28,12 @@
   filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.8));
 }
 
-.swiper-slide { width: auto !important; }
+.swiper-slide {
+  width: auto !important;
+}
 
 .swiper-pagination-bullet {
-  transition: width .6s;
+  transition: width 0.6s;
   border-radius: 8px !important;
   background-color: rgb(255, 255, 255) !important;
 }

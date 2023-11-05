@@ -1,19 +1,19 @@
-import { ReactNode } from "react";
-import empty from "./empty";
-import simple from "./simple";
+import { ReactNode } from 'react';
+import empty from './empty';
+import simple from './simple';
 
 export interface LayoutProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-export type TLayout = "empty" | "simple";
+export type TLayout = 'empty' | 'simple';
 
 const LayoutLoader = (name?: TLayout) => {
   switch (name) {
-    case "empty":
+    case 'empty':
       return empty;
 
-    case "simple":
+    case 'simple':
       return simple;
 
     default:
