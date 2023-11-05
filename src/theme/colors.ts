@@ -4,6 +4,7 @@ export const primary = {
   300: '#71AAFF',
   400: '#3987FF',
   500: '#0065FF',
+  DEFAULT: '#0065FF',
   600: '#004FC6',
   700: '#00388E',
   800: '#002255',
@@ -16,6 +17,7 @@ export const secondary = {
   300: '#DFE3E8',
   400: '#C4CDD5',
   500: '#919EAB',
+  DEFAULT: '#919EAB',
   600: '#637381',
   700: '#454F5B',
   800: '#212B36',
@@ -28,6 +30,7 @@ export const error = {
   300: '#FF8B93',
   400: '#FF737C',
   500: '#FF5A65',
+  DEFAULT: '#FF5A65',
 };
 
 export const warning = {
@@ -36,6 +39,7 @@ export const warning = {
   300: '#FFDB70',
   400: '#FFD454',
   500: '#FFCC33',
+  DEFAULT: '#FFCC33',
 };
 
 export const success = {
@@ -44,6 +48,7 @@ export const success = {
   300: '#50D495',
   400: '#2DCB80',
   500: '#05C168',
+  DEFAULT: '#05C168',
 };
 
 export const info = {
