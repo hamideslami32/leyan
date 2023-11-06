@@ -28,7 +28,10 @@ const ContactUs = () => {
 
           <Divider borderColor='secondary.300' borderBottomWidth='1px' my={6} />
 
-          <Grid gridTemplateColumns='1fr 1fr' rowGap={4} columnGap={6}>
+          <Grid
+            gridTemplateColumns={{ base: '1fr', md: '1fr 1fr' }}
+            rowGap={4}
+            columnGap={6}>
             <Select>
               <option value='test'>test</option>
               <option value='test1'>test</option>
@@ -37,7 +40,11 @@ const ContactUs = () => {
             <Input placeholder='نام و نام خانوادگی' />
             <Input placeholder='ایمیل' />
             <Input placeholder='شماره تماس' />
-            <Textarea placeholder='متن پیام شما' gridColumn='span 2' rows={6} />
+            <Textarea
+              placeholder='متن پیام شما'
+              gridColumn={{ md: 'span 2' }}
+              rows={6}
+            />
           </Grid>
 
           <Divider borderColor='secondary.300' borderBottomWidth='1px' my={6} />
