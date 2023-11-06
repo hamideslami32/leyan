@@ -13,11 +13,11 @@ export const Textarea = defineStyleConfig({
       _placeholder: {
         fontSize: '14px',
       },
-      backgroundColor: '#f1f2f4',
+      backgroundColor: 'secondary.200',
       borderRadius: '4px',
       border: 'solid 2px transparent',
       _focus: {
-        bg: 'secondary.200',
+        bg: 'secondary.100',
         border: 'solid 2px #131B1F',
       },
     },
