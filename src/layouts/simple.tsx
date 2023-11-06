@@ -8,10 +8,10 @@ const simple = (props: LayoutProps) => {
   const { children } = props;
 
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='flex min-h-screen flex-col'>
       <Header />
       <MainMenu />
-      <main className='flex-1 bg-gray-200'>{children}</main>
+      <main className='flex-1'>{children}</main>
       <Footer />
     </div>
   );

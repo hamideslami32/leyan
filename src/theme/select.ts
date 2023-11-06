@@ -1,9 +1,9 @@
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
-import { inputAnatomy } from '@chakra-ui/anatomy';
+import { selectAnatomy } from '@chakra-ui/anatomy';
 
-const helper = createMultiStyleConfigHelpers(inputAnatomy.keys);
+const helper = createMultiStyleConfigHelpers(selectAnatomy.keys);
 
-export const Input = helper.defineMultiStyleConfig({
+export const Select = helper.defineMultiStyleConfig({
   baseStyle: {
     field: {
       h: '48px',
