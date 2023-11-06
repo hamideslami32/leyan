@@ -5,6 +5,7 @@ import { Input } from './input';
 import { Textarea } from './textarea';
 import { Button } from './button';
 import { Select } from './select';
+import { Accordion } from './accordion';
 
 export const theme = extendTheme({
   colors: colors,
@@ -14,5 +15,6 @@ export const theme = extendTheme({
     Textarea,
     Button,
     Select,
+    Accordion,
   },
 });
