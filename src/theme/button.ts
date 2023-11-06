@@ -12,15 +12,15 @@ export const Button = defineStyleConfig({
     },
   },
   variants: {
-    solid: {
+    solid: ({ colorScheme }) => ({
       rounded: 'md',
       h: 12,
-      bg: 'black',
+      bg: `${colorScheme}.800`,
       textColor: 'white',
 
       _hover: {
-        bg: 'secondary.900',
+        bg: `${colorScheme}.700`,
       },
-    },
+    }),
   },
 });
