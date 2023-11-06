@@ -5,7 +5,6 @@ import { Input } from './input';
 import { Textarea } from './textarea';
 import { Button } from './button';
 import { Select } from './select';
-import { styles } from './styles';
 
 export const theme = extendTheme({
   colors: colors,
