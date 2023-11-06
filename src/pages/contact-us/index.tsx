@@ -7,9 +7,8 @@ import {
   Grid,
   Input,
   Textarea,
+  Select,
 } from '@chakra-ui/react';
-
-import Select from '@/components/shared/ui/select/select';
 
 const ContactUs = () => {
   return (
@@ -30,7 +29,11 @@ const ContactUs = () => {
           <Divider borderColor='secondary.300' borderBottomWidth='1px' my={6} />
 
           <Grid gridTemplateColumns='1fr 1fr' rowGap={4} columnGap={6}>
-            <Select />
+            <Select>
+              <option value='test'>test</option>
+              <option value='test1'>test</option>
+              <option value='test2'>test</option>
+            </Select>
             <Input placeholder='نام و نام خانوادگی' />
             <Input placeholder='ایمیل' />
             <Input placeholder='شماره تماس' />
@@ -39,7 +42,7 @@ const ContactUs = () => {
 
           <Divider borderColor='secondary.300' borderBottomWidth='1px' my={6} />
 
-          <Button display='flex' px={10} mr='auto'>
+          <Button colorScheme='secondary' display='flex' px={10} mr='auto'>
             ارسال پیام
           </Button>
         </form>
