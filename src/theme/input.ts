@@ -6,10 +6,16 @@ const helper = createMultiStyleConfigHelpers(inputAnatomy.keys);
 export const Input = helper.defineMultiStyleConfig({
   baseStyle: {
     field: {
-      h: '48px',
-      pr: 4,
-      pl: 4,
       transition: 'border-color 300ms',
+    },
+  },
+  sizes: {
+    md: {
+      field: {
+        h: '48px',
+        pr: 4,
+        pl: 4,
+      },
     },
   },
   variants: {
@@ -28,5 +34,5 @@ export const Input = helper.defineMultiStyleConfig({
       },
     },
   },
-  defaultProps: { variant: 'unstyled' },
+  defaultProps: { variant: 'unstyled', size: 'md' },
 });

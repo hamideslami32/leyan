@@ -1,5 +1,4 @@
-import Categories from '@/components/pages/home/categories/Categories';
-import ProductCard from '@/components/shared/product-card/ProductCard';
+import { useMemo } from 'react';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -17,20 +16,33 @@ import {
   AccordionPanel,
   AccordionIcon,
   StackDivider,
+  Switch,
+  Input,
+  InputRightElement,
+  InputGroup,
+  InputLeftElement,
 } from '@chakra-ui/react';
+
+import Categories from '@/components/pages/home/categories/Categories';
+import ProductCard from '@/components/shared/product-card/ProductCard';
+import SortButton from '@/components/pages/product-list-page/SortButton';
+import { products } from '@/components/pages/home/best-sellers/BestSellers';
 
 import SortIcon from '@/assets/icons/sort.svg';
 import BlueTrashIcon from '@/assets/icons/blue-trash.svg';
-
-import { products } from '@/components/pages/home/best-sellers/BestSellers';
-import { useMemo } from 'react';
-import SortButton from '@/components/pages/product-list-page/SortButton';
+import SearchIcon from '@/assets/icons/search.svg';
 
 const ProductList = () => {
   const productCards = useMemo(
     () =>
       products.map((product, idx) => (
-        <ProductCard key={idx} productData={product} />
+        <ProductCard
+          showRating
+          autoWidth
+          isBordered
+          key={idx}
+          productData={product}
+        />
       )),
     [],
   );
@@ -67,7 +79,7 @@ const ProductList = () => {
           />
         </Box>
 
-        <Flex gap={6}>
+        <Flex gap={6} align='flex-start'>
           <Box
             bg='#ffffff'
             rounded='md'
@@ -99,15 +111,29 @@ const ProductList = () => {
                     <AccordionIcon />
                   </AccordionButton>
 
-                  <AccordionPanel pb={4}>
-                    بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
-                    پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای داخلی
-                    دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل لوفت‌هانزا،
-                    امارات، قطرایرویز، ترکیش‌ایر، ایرفرانس، کی‌ال‌ام، آئروفلوت،
-                    آلیتالیا، اوکراینی، ایرایژیا، پگاسوس و ده‌ها ایرلاین دیگر در
-                    علی‌بابا قابل تهیه هستند. همچنین بلیط پروازهای خارجیِ شرکت
-                    های هواپیمایی داخلی مانند ماهان، ایران‌ایر، قشم ایر، آتا و
-                    .. نیز روی سایت علی‌بابا به فروش می‌رسد.
+                  <AccordionPanel>
+                    <InputGroup variant='unstyled' size='unsized'>
+                      <InputLeftElement
+                        right='12px'
+                        w='24px'
+                        h='24px'
+                        top='50%'
+                        pointerEvents='none'
+                        transform='translateY(-50%)'>
+                        <SearchIcon className='text-secondary-500' />
+                      </InputLeftElement>
+                      <Input
+                        h='40px'
+                        placeholder='جستجو در برند‌ ...'
+                        rounded='md'
+                        pr='42px'
+                        variant='search'
+                        size='search'
+                        bg='secondary.200'
+                      />
+                    </InputGroup>
+
+                    <Switch size='filter' variant='filter' />
                   </AccordionPanel>
                 </AccordionItem>
               </Accordion>
@@ -120,7 +146,7 @@ const ProductList = () => {
                     <AccordionIcon />
                   </AccordionButton>
 
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel>
                     بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
                     پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای داخلی
                     دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل لوفت‌هانزا،
@@ -159,7 +185,9 @@ const ProductList = () => {
                 3,093,488 کالا
               </Text>
             </Flex>
-            <Grid gridTemplateColumns='1fr 1fr 1fr'>{productCards}</Grid>
+            <Grid gridTemplateColumns='1fr 1fr 1fr' gap={6}>
+              {productCards}
+            </Grid>
           </Box>
         </Flex>
       </div>

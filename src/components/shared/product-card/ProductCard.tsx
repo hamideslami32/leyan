@@ -1,16 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 import StarFilledIcon from '@/assets/icons/star-filled.svg';
+import { Box } from '@chakra-ui/react';
 
 interface ProductCardProps {
   showRating?: boolean;
-  productData: any;
+  autoWidth?: boolean;
+  isBordered?: boolean;
+  productData: {
+    title: string;
+    remaining: string;
+    rating: string;
+    price: number;
+    finalPrice: number;
+  };
 }
 
 const ProductCard = (props: ProductCardProps) => {
-  const { showRating = false, productData } = props;
+  const { showRating = false, productData, autoWidth, isBordered } = props;
 
   return (
-    <div className='flex w-[240px] flex-col rounded-md bg-white'>
+    <Box
+      display='flex'
+      flexDirection='column'
+      rounded='md'
+      w={autoWidth ? 'auto' : '240px'}
+      border={isBordered ? 'solid 1px' : 'none'}
+      borderColor='secondary.300'
+      bg='white'>
       <div className='h-[55%]'>
         <img
           alt='product-1'
@@ -47,7 +63,7 @@ const ProductCard = (props: ProductCardProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 

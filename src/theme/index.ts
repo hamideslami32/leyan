@@ -6,6 +6,7 @@ import { Textarea } from './textarea';
 import { Button } from './button';
 import { Select } from './select';
 import { Accordion } from './accordion';
+import { Switch } from './switch';
 
 export const theme = extendTheme({
   fonts: {
@@ -20,5 +21,6 @@ export const theme = extendTheme({
     Button,
     Select,
     Accordion,
+    Switch,
   },
 });
