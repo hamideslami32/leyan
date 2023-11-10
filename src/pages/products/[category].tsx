@@ -1,0 +1,170 @@
+import Categories from '@/components/pages/home/categories/Categories';
+import ProductCard from '@/components/shared/product-card/ProductCard';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  Heading,
+  Box,
+  Flex,
+  Grid,
+  Text,
+  Button,
+  Stack,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  StackDivider,
+} from '@chakra-ui/react';
+
+import SortIcon from '@/assets/icons/sort.svg';
+import BlueTrashIcon from '@/assets/icons/blue-trash.svg';
+
+import { products } from '@/components/pages/home/best-sellers/BestSellers';
+import { useMemo } from 'react';
+import SortButton from '@/components/pages/product-list-page/SortButton';
+
+const ProductList = () => {
+  const productCards = useMemo(
+    () =>
+      products.map((product, idx) => (
+        <ProductCard key={idx} productData={product} />
+      )),
+    [],
+  );
+
+  return (
+    <div className='px-6 py-12'>
+      <div className='mx-auto max-w-cs'>
+        <Breadcrumb color='secondary.600' fontSize='sm' mb={6}>
+          <BreadcrumbItem>
+            <BreadcrumbLink href='#'>Home</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem>
+            <BreadcrumbLink href='#'>Docs</BreadcrumbLink>
+          </BreadcrumbItem>
+
+          <BreadcrumbItem isCurrentPage>
+            <BreadcrumbLink href='#'>Breadcrumb</BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+
+        <Heading as='h1' mb={6}>
+          ملزومات تراکتور
+        </Heading>
+
+        <Box as='section' mb={6}>
+          <Heading as='h2' fontSize='lg' mb={5}>
+            دسته بندی ها
+          </Heading>
+          <Categories
+            showTitle={false}
+            centerItems={false}
+            hasPadding={false}
+          />
+        </Box>
+
+        <Flex gap={6}>
+          <Box
+            bg='#ffffff'
+            rounded='md'
+            shadow='lg'
+            p={4}
+            w='282px'
+            flexShrink={0}>
+            <Flex justify='space-between' mb={8}>
+              <Text fontWeight={700} fontSize='xl' color='secondary.900'>
+                فیلترها
+              </Text>
+              <Button
+                gap={1}
+                fontSize='sm'
+                color='#2E83FD'
+                variant='unstyled'
+                size='unsized'>
+                <BlueTrashIcon />
+                حذف فیلترها
+              </Button>
+            </Flex>
+            <Stack spacing={3} divider={<StackDivider color='secondary.300' />}>
+              <Accordion allowMultiple variant='filter'>
+                <AccordionItem>
+                  <AccordionButton>
+                    <Box as='span' flex='1' textAlign='right'>
+                      برند ها
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel pb={4}>
+                    بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
+                    پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای داخلی
+                    دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل لوفت‌هانزا،
+                    امارات، قطرایرویز، ترکیش‌ایر، ایرفرانس، کی‌ال‌ام، آئروفلوت،
+                    آلیتالیا، اوکراینی، ایرایژیا، پگاسوس و ده‌ها ایرلاین دیگر در
+                    علی‌بابا قابل تهیه هستند. همچنین بلیط پروازهای خارجیِ شرکت
+                    های هواپیمایی داخلی مانند ماهان، ایران‌ایر، قشم ایر، آتا و
+                    .. نیز روی سایت علی‌بابا به فروش می‌رسد.
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+              <Accordion allowMultiple variant='filter'>
+                <AccordionItem>
+                  <AccordionButton>
+                    <Box as='span' flex='1' textAlign='right'>
+                      برند ها
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+
+                  <AccordionPanel pb={4}>
+                    بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
+                    پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای داخلی
+                    دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل لوفت‌هانزا،
+                    امارات، قطرایرویز، ترکیش‌ایر، ایرفرانس، کی‌ال‌ام، آئروفلوت،
+                    آلیتالیا، اوکراینی، ایرایژیا، پگاسوس و ده‌ها ایرلاین دیگر در
+                    علی‌بابا قابل تهیه هستند. همچنین بلیط پروازهای خارجیِ شرکت
+                    های هواپیمایی داخلی مانند ماهان، ایران‌ایر، قشم ایر، آتا و
+                    .. نیز روی سایت علی‌بابا به فروش می‌رسد.
+                  </AccordionPanel>
+                </AccordionItem>
+              </Accordion>
+            </Stack>
+          </Box>
+          <Box flexGrow={1}>
+            <Flex
+              gap={3}
+              px={3}
+              alignItems='center'
+              bg='secondary.100'
+              h='56px'
+              mb={8}
+              rounded='base'>
+              <Flex gap={2}>
+                <SortIcon />
+                <Text>مرتب سازی:</Text>
+              </Flex>
+              <SortButton>پربازدیدترین</SortButton>
+              <SortButton>جدیدترین</SortButton>
+              <SortButton active>پرفروش‌ترین</SortButton>
+              <SortButton>ارزان‌ترین</SortButton>
+              <SortButton>گران‌ترین</SortButton>
+              <SortButton>سریع‌ترین ارسال</SortButton>
+              <SortButton>پیشنهاد خریداران</SortButton>
+
+              <Text fontSize='sm' color='secondary.600' mr='auto'>
+                3,093,488 کالا
+              </Text>
+            </Flex>
+            <Grid gridTemplateColumns='1fr 1fr 1fr'>{productCards}</Grid>
+          </Box>
+        </Flex>
+      </div>
+    </div>
+  );
+};
+
+export default ProductList;
