@@ -127,7 +127,7 @@ const ProductDetailsPage = () => {
         </div>
       </section>
       <section className='mx-auto w-full max-w-cs py-8'>
-        <div className='bg-misc-khaki flex flex-col items-center justify-between gap-8 rounded-xl px-4 py-4 md:flex-row md:px-8'>
+        <div className='flex flex-col items-center justify-between gap-8 rounded-xl bg-misc-400 px-4 py-4 md:flex-row md:px-8'>
           <div className='w-full space-y-3 md:w-[30%]'>
             <Text as='b' fontSize='4xl' color='white'>
               خرید اقساطی تجهیزات و ادوات کشاورزی

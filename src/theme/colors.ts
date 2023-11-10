@@ -58,3 +58,7 @@ export const info = {
   dark: '#006C9C',
   darker: '#003768',
 };
+
+export const misc = {
+  400: '#ECC67B',
+};

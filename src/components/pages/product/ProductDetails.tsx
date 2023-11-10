@@ -86,7 +86,7 @@ function ProductDetails() {
                   } cursor-pointer`}
                   onClick={() => setColor(1)}></div>
                 <div
-                  className={`bg-misc-khaki h-8 w-8 rounded-full border-2 border-white ${
+                  className={`h-8 w-8 rounded-full border-2 border-white bg-misc-400 ${
                     color == 2 ? 'outline outline-2 outline-black' : ''
                   } cursor-pointer`}
                   onClick={() => setColor(2)}></div>
