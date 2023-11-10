@@ -35,7 +35,7 @@ const FAQ = () => {
         </div>
 
         <div className='rounded-lg border border-solid border-secondary-300 px-6'>
-          <Accordion>
+          <Accordion variant='faq'>
             <AccordionItem>
               <AccordionButton>
                 <Box as='span' flex='1' textAlign='right'>
