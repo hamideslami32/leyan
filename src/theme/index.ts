@@ -8,6 +8,10 @@ import { Select } from './select';
 import { Accordion } from './accordion';
 
 export const theme = extendTheme({
+  fonts: {
+    heading: `peyda, sans-serif`,
+    body: `peyda, sans-serif`,
+  },
   colors: colors,
   direction: 'rtl',
   components: {
