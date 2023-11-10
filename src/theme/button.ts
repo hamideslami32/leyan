@@ -13,11 +13,14 @@ export const Button = defineStyleConfig({
     },
   },
   variants: {
-    unstyled: {
-      display: 'inline-flex',
-      color: 'secondary.900',
-      p: 0,
-      m: 0,
+    black: {
+      rounded: 'md',
+      h: 12,
+      bg: 'secondary.900',
+      textColor: 'white',
+      _hover: {
+        bg: `secondary.700`,
+      },
     },
     solid: ({ colorScheme }) => ({
       rounded: 'md',
@@ -29,5 +32,8 @@ export const Button = defineStyleConfig({
         bg: `${colorScheme}.700`,
       },
     }),
+  },
+  defaultProps: {
+    variant: 'black',
   },
 });
