@@ -6,12 +6,19 @@ export const Button = defineStyleConfig({
     fontSize: '16px',
   },
   sizes: {
+    unsized: {},
     md: {
       h: 12,
       px: 4,
     },
   },
   variants: {
+    unstyled: {
+      display: 'inline-flex',
+      color: 'secondary.900',
+      p: 0,
+      m: 0,
+    },
     solid: ({ colorScheme }) => ({
       rounded: 'md',
       h: 12,
