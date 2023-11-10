@@ -11,9 +11,9 @@ import {
   Button,
 } from '@chakra-ui/react';
 
+import { products } from '@/components/pages/home/best-sellers/BestSellers';
 import ProductCard from '@/components/shared/product-card/ProductCard';
 import CustomCarousel from '@/components/shared/custom-carousel/CustomCarousel';
-import { products } from '@/components/pages/home/best-sellers/BestSellers';
 import ExpandableText from '@/components/shared/ui/expandable-text/ExpandableText';
 import SuggestionCard from '@/components/pages/product/SuggestionCard';
 import ProductTabbar from '@/components/pages/product/ProductTabbar';
@@ -65,7 +65,7 @@ const tabbarProduct = [
   },
 ];
 
-const PDP = () => {
+const ProductDetailsPage = () => {
   const renderedDataCustomSlider: ReactNode[] = useMemo(() => {
     return products.map((product, i) => (
       <ProductCard productData={product} key={i} showRating />
@@ -292,4 +292,4 @@ const PDP = () => {
   );
 };
 
-export default PDP;
+export default ProductDetailsPage;
