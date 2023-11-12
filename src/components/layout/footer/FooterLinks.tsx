@@ -4,62 +4,62 @@ const linksData = {
   پالیزبان: [
     {
       title: 'وبلاگ پالیزبان',
-      link: '/',
+      link: '/blog',
     },
     {
       title: 'عضویت در پنل فروشندگان',
-      link: '/',
+      link: '/portal/register',
     },
     {
       title: 'فرصت های شغلی',
-      link: '/',
+      link: '/careers',
     },
     {
       title: 'درباره پالیزبان',
-      link: '/',
+      link: '/about',
     },
     {
       title: 'تماس با پالیزبان',
-      link: '/',
+      link: '/contact-us',
     },
   ],
   'خدمات مشتریان': [
     {
       title: 'پرسش‌های متداول',
-      link: '/',
+      link: '/faq',
     },
     {
       title: 'قوانین و مقررات',
-      link: '/',
+      link: '/privacy-policy',
     },
     {
       title: 'ضمانت کالا',
-      link: '/',
+      link: '/guarantee',
     },
     {
       title: 'گزارش تخلف فروشنده',
-      link: '/',
+      link: '/report-issue',
     },
   ],
   'راهنمای خرید': [
     {
       title: 'نحوه ثبت سفارش',
-      link: '/',
+      link: '/guide/how-to-register-order',
     },
     {
       title: 'رویه ارسال سفارشات',
-      link: '/',
+      link: '/guide/delivery-types',
     },
     {
       title: 'شیوه های پرداخت',
-      link: '/',
+      link: '/guide/payment-methods',
     },
   ],
 };
 
 const FooterLinks = () => {
   return (
-    <div className='flex-1 flex'>
+    <div className='flex flex-1'>
       {Object.keys(linksData).map((key, index) => {
         const list = (linksData as Record<string, any>)[key];
         return (
@@ -68,7 +68,7 @@ const FooterLinks = () => {
             <ul className='flex flex-col'>
               {list.map((item: any, index: number) => (
                 <Link href={item.link} key={index} className='inline-block'>
-                  <li className='text-sm text-gray-600 mb-3'>{item.title}</li>
+                  <li className='mb-3 text-sm text-gray-600'>{item.title}</li>
                 </Link>
               ))}
             </ul>
