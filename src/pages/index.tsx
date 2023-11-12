@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
 
   const firstSliderData: ReactNode[] = useMemo(() => {
-    return Object.keys(new Array(5)).map((_, i) => (
+    return [...new Array(5)].map((_, i) => (
       <div key={i} className='h-[400px]'>
         <img
           src='/images/home/banner.png'
@@ -32,14 +32,14 @@ const Home = () => {
 
   return (
     <div className='p-6'>
-      <div className='w-full max-w-cs mx-auto'>
+      <div className='mx-auto w-full max-w-cs'>
         <div className='my-8 rounded-lg'>
           <Swiper data={firstSliderData} showNavigation showPagination />
         </div>
         <PopularCards />
         <Categories />
         <BestSellers />
-        <div className='flex justify-between my-10'>
+        <div className='my-10 flex justify-between'>
           <Link href='/'>
             <Image
               height='248'
