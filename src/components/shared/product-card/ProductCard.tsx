@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import StarFilledIcon from '@/assets/icons/star-filled.svg';
-import { Box } from '@chakra-ui/react';
+import { Box, LinkBox, LinkOverlay } from '@chakra-ui/react';
 
 interface ProductCardProps {
   showRating?: boolean;
@@ -19,7 +19,7 @@ const ProductCard = (props: ProductCardProps) => {
   const { showRating = false, productData, autoWidth, isBordered } = props;
 
   return (
-    <Box
+    <LinkBox
       display='flex'
       flexDirection='column'
       rounded='md'
@@ -35,7 +35,9 @@ const ProductCard = (props: ProductCardProps) => {
         />
       </div>
       <div className='flex flex-1 flex-col justify-between p-4'>
-        <div className='text-sm'>{productData.title}</div>
+        <LinkOverlay href='/' className='text-sm'>
+          {productData.title}
+        </LinkOverlay>
         {showRating && (
           <div className='mt-2 flex items-center justify-between text-xs'>
             <span className='text-red-500'>{productData.remaining}</span>
@@ -63,7 +65,7 @@ const ProductCard = (props: ProductCardProps) => {
           </div>
         </div>
       </div>
-    </Box>
+    </LinkBox>
   );
 };
 

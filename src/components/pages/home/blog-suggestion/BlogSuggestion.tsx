@@ -1,5 +1,6 @@
 import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
 import ClockIcon from '@/assets/icons/clock.svg';
+import { LinkBox, LinkOverlay } from '@chakra-ui/react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -37,7 +38,7 @@ const BlogSuggestion = () => {
       <div className='flex gap-6'>
         {blogFakeData.map((item, index) => {
           return (
-            <div key={index} className='flex-1 rounded-md border p-4'>
+            <LinkBox key={index} className='flex-1 rounded-md border p-4'>
               <Image
                 width='352'
                 height='165'
@@ -46,13 +47,13 @@ const BlogSuggestion = () => {
                 className='rounded-md'
               />
               <div className='mt-3 flex flex-col gap-1'>
-                <div>{item.title}</div>
+                <LinkOverlay href='/'>{item.title}</LinkOverlay>
                 <div className='flex items-center gap-2 text-sm text-gray-500'>
                   <ClockIcon width='20' height='20' />
                   <span>{item.lastUpdate}</span>
                 </div>
               </div>
-            </div>
+            </LinkBox>
           );
         })}
       </div>

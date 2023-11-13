@@ -9,7 +9,7 @@ import AuthButton from './AuthButton';
 const Header = () => {
   const { width } = useWindowSize();
   return (
-    <header className='border-b border-gray-300 px-2 py-4 md:px-0'>
+    <header className='border-b border-gray-200 px-2 py-4 md:px-0'>
       <div className='mx-auto flex w-full max-w-cs justify-between'>
         <div className='flex flex-1 items-center'>
           {width > 768 && (

@@ -16,7 +16,7 @@ const links = [
 
 const MainMenu = () => {
   return (
-    <div className='my-4 grid place-items-center'>
+    <div className='my-3 grid place-items-center'>
       <div className='flex w-full max-w-cs items-center justify-between'>
         <div className='flex items-center'>
           <div className='z-10 ml-10 flex items-center gap-3'>

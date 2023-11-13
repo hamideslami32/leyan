@@ -9,8 +9,10 @@ const simple = (props: LayoutProps) => {
 
   return (
     <div className='flex min-h-screen flex-col'>
-      <Header />
-      <MainMenu />
+      <div style={{ boxShadow: '0px 4px 80px 0px #8484841F' }}>
+        <Header />
+        <MainMenu />
+      </div>
       <main className='flex-1'>{children}</main>
       <Footer />
     </div>
