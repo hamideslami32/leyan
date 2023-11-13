@@ -32,7 +32,7 @@ const AuthButton = () => {
               height='32'
               alt='avatar'
             />
-            <div>یونس نصراصفهانی</div>
+            <div>یونس نصرتهرانی</div>
             <ChevronLeftIcon />
           </MenuItem>
           <MenuDivider my={0} />

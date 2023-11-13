@@ -2,6 +2,7 @@
 import BestSellers, {
   products,
 } from '@/components/pages/home/best-sellers/BestSellers';
+import BlogSuggestion from '@/components/pages/home/blog-suggestion/BlogSuggestion';
 import Categories from '@/components/pages/home/categories/Categories';
 import PopularCards from '@/components/pages/home/popular-cards/PopularCards';
 import CustomCarousel from '@/components/shared/custom-carousel/CustomCarousel';
@@ -14,7 +15,7 @@ import { ReactNode, useMemo } from 'react';
 const Home = () => {
   const renderedDataCustomSlider: ReactNode[] = useMemo(() => {
     return products.map((product, i) => (
-      <ProductCard productData={product} key={i} showRating />
+      <ProductCard isBordered productData={product} key={i} showRating />
     ));
   }, []);
 
@@ -69,6 +70,7 @@ const Home = () => {
           link={'/'}
           data={renderedDataCustomSlider}
         />
+        <BlogSuggestion />
       </div>
     </div>
   );

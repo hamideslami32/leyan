@@ -37,7 +37,7 @@ const MainMenu = () => {
                 <li
                   key={index}
                   className='border-b-2 border-transparent py-1 hover:border-green-500'>
-                  <Link href={item.link} className='ml-3 text-gray-400'>
+                  <Link href={item.link} className='ml-3 text-gray-500'>
                     {item.icon}
                     <span className='mr-2'>{item.title}</span>
                   </Link>
@@ -47,8 +47,8 @@ const MainMenu = () => {
           </nav>
         </div>
         <Button className='flex items-center' variant='text'>
-          <LocationIcon />
-          <span className='mr-2 text-sm'>ارسال به اصفهان، اصفهان</span>
+          <LocationIcon width='20' height='20' />
+          <span className='text-sm'>ارسال به تهران</span>
         </Button>
       </div>
     </div>
