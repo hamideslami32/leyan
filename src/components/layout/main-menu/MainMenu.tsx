@@ -1,6 +1,9 @@
 import BurgerMenuIcon from '@/assets/icons/burger-menu.svg';
 import LocationIcon from '@/assets/icons/location.svg';
 import Button from '@/components/shared/ui/button/Button';
+import MegaMenu from './mega-menu/MegaMenu';
+
+import { Menu, MenuButton, MenuList } from '@chakra-ui/react';
 import Link from 'next/link';
 
 const links = [
@@ -13,19 +16,27 @@ const links = [
 
 const MainMenu = () => {
   return (
-    <div className='grid place-items-center my-4'>
+    <div className='my-4 grid place-items-center'>
       <div className='flex w-full max-w-cs items-center justify-between'>
         <div className='flex items-center'>
-          <div className='flex gap-3 items-center ml-10'>
-            <Button variant='icon'>
-              <BurgerMenuIcon />
-            </Button>
+          <div className='z-10 ml-10 flex items-center gap-3'>
+            <Menu>
+              <MenuButton>
+                <BurgerMenuIcon />
+              </MenuButton>
+              <MenuList className='-mr-10 !py-0'>
+                <MegaMenu />
+              </MenuList>
+            </Menu>
+            <Button variant='icon'></Button>
             <span className='text-lg'>دسته‌بندی کالاها</span>
           </div>
           <nav>
             <ul className='flex'>
               {links.map((item, index) => (
-                <li key={index}>
+                <li
+                  key={index}
+                  className='border-b-2 border-transparent py-1 hover:border-green-500'>
                   <Link href={item.link} className='ml-3 text-gray-400'>
                     {item.icon}
                     <span className='mr-2'>{item.title}</span>
@@ -37,7 +48,7 @@ const MainMenu = () => {
         </div>
         <Button className='flex items-center' variant='text'>
           <LocationIcon />
-          <span className='text-sm mr-2'>ارسال به اصفهان، اصفهان</span>
+          <span className='mr-2 text-sm'>ارسال به اصفهان، اصفهان</span>
         </Button>
       </div>
     </div>
