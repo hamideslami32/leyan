@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div className='p-6'>
       <div className='mx-auto w-full max-w-cs'>
-        <div className='my-8 rounded-lg'>
+        <div className='mb-8 rounded-lg'>
           <Swiper data={firstSliderData} showNavigation showPagination />
         </div>
         <PopularCards />

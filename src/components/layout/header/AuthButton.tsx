@@ -38,7 +38,7 @@ const AuthButton = () => {
           </MenuItem>
           <MenuDivider my={0} />
           <MenuItem icon={<BasketIcon />}>
-            <div className=''>سفارش‌ها</div>
+            <div>سفارش‌ها</div>
           </MenuItem>
           <MenuItem icon={<WalletIcon />}>
             <div className='flex justify-between'>
@@ -47,7 +47,7 @@ const AuthButton = () => {
             </div>
           </MenuItem>
           <MenuItem icon={<CommentIcon />}>
-            <div className=''>دیدگاه‌ها</div>
+            <div>دیدگاه‌ها</div>
           </MenuItem>
           <MenuItem icon={<LogoutIcon />}>خروج از حساب کاربری</MenuItem>
         </MenuList>
