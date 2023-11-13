@@ -1,11 +1,25 @@
+/* eslint-disable @next/next/no-img-element */
 import SearchIcon from '@/assets/icons/search.svg';
-import Button from '@/components/shared/ui/button/Button';
+import {
+  Button,
+  Link,
+  Menu,
+  MenuButton,
+  MenuList,
+  forwardRef,
+} from '@chakra-ui/react';
 import classNames from 'classnames';
+
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-const SearchBar = () => {
+import ClockIcon from '@/assets/icons/clock.svg';
+import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
+import FireIcon from '@/assets/icons/fire.svg';
+
+const SearchInput = forwardRef((props, ref) => {
+  const { setIsFocus, isFocus } = props;
   const searchRef = useRef<HTMLInputElement>(null);
-  const [isFocus, setIsFocus] = useState(false);
   useEffect(() => {
     if (searchRef.current?.focus) {
       searchRef.current.addEventListener('focus', () => {
@@ -18,18 +32,104 @@ const SearchBar = () => {
   }, []);
   return (
     <div
+      ref={ref}
       className={classNames(
-        'flex items-center border border-transparent pr-4 h-12 w-full max-w-[600px] text-sm bg-gray-200 placeholder:text-gray-600 rounded-md',
+        'flex h-12 w-[600px] items-center rounded-md border border-transparent bg-gray-200 pr-4 text-sm placeholder:text-gray-600',
         isFocus && '!border-black',
       )}>
-      <Button variant='icon'>
-        <SearchIcon className={isFocus ? '' : 'text-gray-400'} />
-      </Button>
+      <SearchIcon className={isFocus ? '' : 'text-gray-400'} />
       <input
         ref={searchRef}
-        className='w-full h-full mr-2 px-1 bg-transparent outline-none'
+        className='mr-2 h-full w-full bg-transparent px-1 outline-none'
         placeholder='جستجو در محصولات'
       />
+    </div>
+  );
+});
+
+const SearchBar = () => {
+  const [isFocus, setIsFocus] = useState(false);
+
+  return (
+    <div className='relative z-10'>
+      <Menu variant={'authMenu'} isOpen={isFocus}>
+        <MenuButton
+          as={SearchInput}
+          isFocus={isFocus}
+          setIsFocus={setIsFocus}></MenuButton>
+
+        <MenuList className='w-[600px]'>
+          <div>
+            <Link className='flex flex-col p-4'>
+              <Image
+                width='600'
+                height='186'
+                alt='search-banner'
+                src='/images/search-sample.png'
+                className='rounded-lg object-cover'
+              />
+            </Link>
+          </div>
+          <div className='my-4 pr-4'>
+            <div className='flex items-center'>
+              <ClockIcon />
+              <span className='mr-3'>آخرین جستجو های شما</span>
+            </div>
+            <div className='mt-4 flex gap-3'>
+              <Button
+                as={Link}
+                variant={'outline'}
+                className='!border-gray-300'
+                rightIcon={<ArrowLeftIcon />}>
+                ابزارآلات کشاورزی
+              </Button>
+              <Button
+                as={Link}
+                variant={'outline'}
+                className='!border-gray-300'
+                rightIcon={<ArrowLeftIcon />}>
+                ملزومات تراکتور
+              </Button>
+              <Button
+                as={Link}
+                variant={'outline'}
+                className='!border-gray-300'
+                rightIcon={<ArrowLeftIcon />}>
+                کود های شیمیایی
+              </Button>
+            </div>
+          </div>
+          <div className='my-8 pr-4'>
+            <div className='flex items-center'>
+              <FireIcon />
+              <span className='mr-3'>پرطرفدارترین جستجو‌ها</span>
+            </div>
+            <div className='mt-4 flex gap-3'>
+              <Button
+                as={Link}
+                variant={'outline'}
+                className='!border-gray-300'
+                rightIcon={<ArrowLeftIcon />}>
+                ابزارآلات کشاورزی
+              </Button>
+              <Button
+                as={Link}
+                variant={'outline'}
+                className='!border-gray-300'
+                rightIcon={<ArrowLeftIcon />}>
+                ملزومات تراکتور
+              </Button>
+              <Button
+                as={Link}
+                variant={'outline'}
+                className='!border-gray-300'
+                rightIcon={<ArrowLeftIcon />}>
+                کود های شیمیایی
+              </Button>
+            </div>
+          </div>
+        </MenuList>
+      </Menu>
     </div>
   );
 };

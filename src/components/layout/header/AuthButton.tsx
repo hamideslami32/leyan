@@ -1,6 +1,5 @@
 import {
   Button,
-  Divider,
   Menu,
   MenuButton,
   MenuDivider,

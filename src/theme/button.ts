@@ -2,6 +2,7 @@ import { defineStyleConfig } from '@chakra-ui/react';
 
 export const Button = defineStyleConfig({
   baseStyle: {
+    rounded: '4px',
     fontWeight: '400',
     fontSize: '16px',
   },
@@ -14,16 +15,15 @@ export const Button = defineStyleConfig({
   },
   variants: {
     black: {
-      rounded: 'md',
       h: 12,
       bg: 'secondary.900',
       textColor: 'white',
+
       _hover: {
         bg: `secondary.700`,
       },
     },
     solid: ({ colorScheme }) => ({
-      rounded: 'md',
       h: 12,
       bg: `${colorScheme}.800`,
       textColor: 'white',

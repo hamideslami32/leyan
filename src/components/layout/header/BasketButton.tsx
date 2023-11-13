@@ -10,7 +10,6 @@ import {
 import BasketIcon from '@/assets/icons/basket.svg';
 import ChevronLeftIcon from '@/assets/icons/chevron-left.svg';
 import ShopIcon from '@/assets/icons/shop.svg';
-import { success } from '@/theme/colors';
 import Counter from '@/components/shared/counter/Counter';
 import { useState } from 'react';
 
