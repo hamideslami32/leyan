@@ -132,8 +132,8 @@ const ProductDetailsPage = () => {
             <Text as='b' fontSize='4xl' color='white'>
               خرید اقساطی تجهیزات و ادوات کشاورزی
             </Text>
-            <Text fontSize='sm' color='secondary.500'>
-              از اگری بالکا اعتبار بگیرید و آنلاین خرید کنید!
+            <Text fontSize='sm' color='secondary.600'>
+              از پالیزبان اعتبار بگیرید و آنلاین خرید کنید!
             </Text>
           </div>
           <div className='w-full space-y-4 md:w-[30%]'>

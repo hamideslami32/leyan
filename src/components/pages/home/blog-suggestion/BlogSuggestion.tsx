@@ -25,7 +25,7 @@ const blogFakeData = [
 
 const BlogSuggestion = () => {
   return (
-    <section className='mb-24'>
+    <section className='mb-24 px-4 md:px-0'>
       <div className='mb-7 flex items-center justify-between'>
         <h2 className='text-lg font-bold'>جدیدترین‌های مجله</h2>
         <Link
@@ -35,7 +35,7 @@ const BlogSuggestion = () => {
           <ArrowLeftIcon width='20' height='20' />
         </Link>
       </div>
-      <div className='flex gap-6'>
+      <div className='flex flex-col gap-6 md:flex-row'>
         {blogFakeData.map((item, index) => {
           return (
             <LinkBox key={index} className='flex-1 rounded-md border p-4'>
@@ -44,7 +44,7 @@ const BlogSuggestion = () => {
                 height='165'
                 alt={item.title}
                 src={`/images/home/blog-${item.image}.png`}
-                className='rounded-md'
+                className='md:auto w-full rounded-md'
               />
               <div className='mt-3 flex flex-col gap-1'>
                 <LinkOverlay href='/'>{item.title}</LinkOverlay>

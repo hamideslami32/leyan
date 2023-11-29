@@ -10,13 +10,13 @@ const links = [
   { link: '#', title: 'تخفیف‌های ویژه', icon: '' },
   { link: '#', title: 'پرفروش‌ترین‌ها', icon: '' },
   { link: '#', title: 'خرید اقساطی', icon: '' },
-  { link: '#', title: 'مجله اگری‌بالکا', icon: '' },
+  { link: '#', title: 'مجله پالیزبان', icon: '' },
   { link: '#', title: 'فروشنده شوید!', icon: '' },
 ];
 
 const MainMenu = () => {
   return (
-    <div className='my-3 grid place-items-center'>
+    <div className='my-3 hidden place-items-center lg:grid'>
       <div className='flex w-full max-w-cs items-center justify-between'>
         <div className='flex items-center'>
           <div className='z-10 ml-10 flex items-center gap-3'>

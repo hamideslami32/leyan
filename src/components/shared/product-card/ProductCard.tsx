@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import StarFilledIcon from '@/assets/icons/star-filled.svg';
 import { Box, LinkBox, LinkOverlay } from '@chakra-ui/react';
+import classNames from 'classnames';
 
 interface ProductCardProps {
+  className?: string;
   showRating?: boolean;
   autoWidth?: boolean;
   isBordered?: boolean;
@@ -16,7 +18,13 @@ interface ProductCardProps {
 }
 
 const ProductCard = (props: ProductCardProps) => {
-  const { showRating = false, productData, autoWidth, isBordered } = props;
+  const {
+    showRating = false,
+    productData,
+    autoWidth,
+    isBordered,
+    className,
+  } = props;
 
   return (
     <LinkBox
@@ -24,6 +32,7 @@ const ProductCard = (props: ProductCardProps) => {
       flexDirection='column'
       rounded='md'
       w={autoWidth ? 'auto' : '240px'}
+      className={classNames(className)}
       border={isBordered ? 'solid 1px' : 'none'}
       borderColor='secondary.300'
       bg='white'>
@@ -31,10 +40,10 @@ const ProductCard = (props: ProductCardProps) => {
         <img
           alt='product-1'
           src='/images/product-sample.png'
-          className='roundend-t-md mx-auto object-scale-down'
+          className='roundend-t-md mx-auto max-h-full object-scale-down'
         />
       </div>
-      <div className='flex flex-1 flex-col justify-between p-4'>
+      <div className='flex flex-1 flex-col justify-between p-1 md:p-4'>
         <LinkOverlay href='/' className='text-sm'>
           {productData.title}
         </LinkOverlay>
@@ -47,14 +56,14 @@ const ProductCard = (props: ProductCardProps) => {
             </span>
           </div>
         )}
-        <div className='mt-4 flex justify-between'>
+        <div className='mt-2 flex justify-between md:mt-4'>
           {/* TODO // change bg-red-500 and add color pallete */}
-          <span className='h-6 rounded-xl bg-red-500 px-3 py-1 text-xs text-white'>
+          <span className='h-6 rounded-xl bg-red-500 px-2 py-1 text-xs text-white md:px-3'>
             ۱۲٪
           </span>
           <div className='flex flex-col'>
             <span className='text-sm'>
-              <span className='ml-1 text-xl font-bold'>
+              <span className='ml-1 text-lg font-bold md:text-xl'>
                 {productData.finalPrice}
               </span>
               تومان

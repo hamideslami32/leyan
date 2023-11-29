@@ -2,10 +2,13 @@
 import SearchIcon from '@/assets/icons/search.svg';
 import {
   Button,
+  Input,
   Link,
   Menu,
   MenuButton,
   MenuList,
+  Modal,
+  ModalContent,
   forwardRef,
 } from '@chakra-ui/react';
 import classNames from 'classnames';
@@ -16,10 +19,12 @@ import { useEffect, useRef, useState } from 'react';
 import ClockIcon from '@/assets/icons/clock.svg';
 import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
 import FireIcon from '@/assets/icons/fire.svg';
+import { useWindowSize } from '@/utils/hooks/useWindowSize';
 
 const SearchInput = forwardRef((props, ref) => {
   const { setIsFocus, isFocus } = props;
   const searchRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     if (searchRef.current?.focus) {
       searchRef.current.addEventListener('focus', () => {
@@ -34,13 +39,14 @@ const SearchInput = forwardRef((props, ref) => {
     <div
       ref={ref}
       className={classNames(
-        'flex h-12 w-[600px] items-center rounded-md border border-transparent bg-gray-200 pr-4 text-sm placeholder:text-gray-600',
+        'flex h-12 w-full items-center rounded-md border border-transparent bg-gray-100 pr-4 text-sm placeholder:text-gray-600 lg:max-w-[600px]',
         isFocus && '!border-black',
       )}>
       <SearchIcon className={isFocus ? '' : 'text-gray-400'} />
-      <input
+      <Input
+        variant={'unstyled'}
         ref={searchRef}
-        className='mr-2 h-full w-full bg-transparent px-1 outline-none'
+        className='bg-transpar mr-2 h-full w-full px-1'
         placeholder='جستجو در محصولات'
       />
     </div>
@@ -50,32 +56,30 @@ const SearchInput = forwardRef((props, ref) => {
 const SearchBar = () => {
   const [isFocus, setIsFocus] = useState(false);
 
+  const { width } = useWindowSize();
+
   return (
-    <div className='relative z-10'>
+    <div className='z-20 w-full'>
       <Menu variant={'authMenu'} isOpen={isFocus}>
         <MenuButton
+          w={'full'}
           as={SearchInput}
           isFocus={isFocus}
           setIsFocus={setIsFocus}></MenuButton>
-
-        <MenuList className='w-[600px]'>
-          <div>
-            <Link className='flex flex-col p-4'>
-              <Image
-                width='600'
-                height='186'
-                alt='search-banner'
-                src='/images/search-sample.png'
-                className='rounded-lg object-cover'
-              />
-            </Link>
-          </div>
+        <MenuList className='w-full'>
+          <Link className='flex flex-col'>
+            <img
+              alt='search-banner'
+              src='/images/search-sample.png'
+              className='rounded-lg object-cover p-4'
+            />
+          </Link>
           <div className='my-4 pr-4'>
             <div className='flex items-center'>
               <ClockIcon />
               <span className='mr-3'>آخرین جستجو های شما</span>
             </div>
-            <div className='mt-4 flex gap-3'>
+            <div className='mt-4 flex gap-3 overflow-x-auto'>
               <Button
                 as={Link}
                 variant={'outline'}
@@ -104,7 +108,7 @@ const SearchBar = () => {
               <FireIcon />
               <span className='mr-3'>پرطرفدارترین جستجو‌ها</span>
             </div>
-            <div className='mt-4 flex gap-3'>
+            <div className='mt-4 flex gap-3 overflow-x-auto'>
               <Button
                 as={Link}
                 variant={'outline'}
@@ -128,6 +132,11 @@ const SearchBar = () => {
               </Button>
             </div>
           </div>
+          {
+            <Modal size={'full'} isOpen={false} onClose={() => undefined}>
+              <ModalContent>test</ModalContent>
+            </Modal>
+          }
         </MenuList>
       </Menu>
     </div>

@@ -22,7 +22,7 @@ const popularItems = [
 
 const PopularCards = () => {
   return (
-    <div className='flex gap-3'>
+    <div className='grid grid-cols-2 gap-2 px-4 md:grid-cols-4 md:px-0'>
       {popularItems.map((item, index) => (
         <Link key={index} href={item.link}>
           <PopularCard source={item.imageUrl} />

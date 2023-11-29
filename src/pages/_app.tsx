@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: CustomAppProps) {
   // const { store, props } = wrapper.useWrappedStore(rest);
   const Layout = LayoutLoader(Component.layout);
   return (
-    <ChakraProvider theme={theme} disableGlobalStyle={true} resetCSS={false}>
+    <ChakraProvider theme={theme} disableGlobalStyle={true}>
       <Layout>
         <Component {...pageProps} />
       </Layout>

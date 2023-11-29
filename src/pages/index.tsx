@@ -8,11 +8,13 @@ import PopularCards from '@/components/pages/home/popular-cards/PopularCards';
 import CustomCarousel from '@/components/shared/custom-carousel/CustomCarousel';
 import ProductCard from '@/components/shared/product-card/ProductCard';
 import Swiper from '@/components/shared/swiper/Swiper';
+import { useWindowSize } from '@/utils/hooks/useWindowSize';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode, useMemo } from 'react';
 
 const Home = () => {
+  const { width } = useWindowSize();
   const renderedDataCustomSlider: ReactNode[] = useMemo(() => {
     return products.map((product, i) => (
       <ProductCard isBordered productData={product} key={i} showRating />
@@ -21,26 +23,31 @@ const Home = () => {
 
   const firstSliderData: ReactNode[] = useMemo(() => {
     return [...new Array(5)].map((_, i) => (
-      <div key={i} className='h-[400px]'>
+      <Link href={'/'} key={i}>
         <img
           src='/images/home/banner.png'
           alt='banner'
-          className='rounded-lg'
+          className='!h-auto !w-full rounded-lg object-cover'
         />
-      </div>
+      </Link>
     ));
   }, []);
 
   return (
-    <div className='p-6'>
+    <div className='py-4'>
       <div className='mx-auto w-full max-w-cs'>
-        <div className='mb-8 rounded-lg'>
-          <Swiper data={firstSliderData} showNavigation showPagination />
+        <div className='mb-8 rounded-lg px-4 md:px-0'>
+          <Swiper
+            data={firstSliderData}
+            showNavigation={width > 768}
+            showPagination
+            slidesPerView={1}
+          />
         </div>
         <PopularCards />
         <Categories />
         <BestSellers />
-        <div className='my-10 flex justify-between'>
+        <div className='my-10 flex flex-col justify-between gap-4 px-4 md:flex-row md:px-0'>
           <Link href='/'>
             <Image
               height='248'

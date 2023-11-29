@@ -23,7 +23,7 @@ const facilitiesData = [
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='hidden md:block'>
       <div className='flex h-24 items-center justify-center gap-10 bg-gray-100'>
         {facilitiesData.map((item, index) => (
           <div key={index} className='flex items-center'>
@@ -39,7 +39,7 @@ const Footer = () => {
             <FooterContact />
           </div>
           <div className='my-6 h-[1px] bg-gray-300'></div>
-          <div className='flex justify-between gap-6'>
+          <div className='flex flex-wrap justify-between gap-6'>
             <div className='max-w-[65%]'>
               <h3 className='mb-3 text-3xl'>پالیزبان</h3>
               <p className='text-sm leading-7 text-gray-600'>

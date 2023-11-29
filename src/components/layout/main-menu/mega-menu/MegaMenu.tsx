@@ -1,45 +1,53 @@
 import { Divider } from '@chakra-ui/react';
-import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
 import Link from 'next/link';
+import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
+import FarmingEquipmentIcon from '@/assets/icons/farming-equipment.svg';
+import FarmingMachineryIcon from '@/assets/icons/farming-machinery.svg';
+import GardeningEquipmentIcon from '@/assets/icons/gardening-equipment.svg';
+import GardeningMachineryIcon from '@/assets/icons/gardening-machinery.svg';
+import SoilIcon from '@/assets/icons/soil.svg';
+import SeedsIcon from '@/assets/icons/seeds.svg';
+import PesticidesIcon from '@/assets/icons/pesticides.svg';
+import GardenFurnitureIcon from '@/assets/icons/garden-furniture.svg';
 
 const mainCategories = [
   {
-    icon: '',
+    icon: <FarmingEquipmentIcon />,
     title: 'ادوات کشاورزی',
     link: '',
   },
   {
-    icon: '',
+    icon: <FarmingMachineryIcon />,
     title: 'ماشین‌آلات کشاورزی',
     link: '',
   },
   {
-    icon: '',
+    icon: <GardeningEquipmentIcon />,
     title: 'ادوات باغبانی',
     link: '',
   },
   {
-    icon: '',
+    icon: <GardeningMachineryIcon />,
     title: 'ماشین‌آلات باغبانی',
     link: '',
   },
   {
-    icon: '',
+    icon: <SoilIcon />,
     title: 'خاک و کود',
     link: '',
   },
   {
-    icon: '',
+    icon: <SeedsIcon />,
     title: 'بذر و تخم گیاهان',
     link: '',
   },
   {
-    icon: '',
+    icon: <PesticidesIcon />,
     title: 'سموم و آفت‌کش',
     link: '',
   },
   {
-    icon: '',
+    icon: <GardenFurnitureIcon />,
     title: 'مبلمان باغ و ویلا',
     link: '',
   },

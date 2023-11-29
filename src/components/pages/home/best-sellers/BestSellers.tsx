@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import Button from '@/components/shared/ui/button/Button';
 import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
 import ProductCard from '@/components/shared/product-card/ProductCard';
 import Swiper from '@/components/shared/swiper/Swiper';
+import { useWindowSize } from '@/utils/hooks/useWindowSize';
+import { Button } from '@chakra-ui/react';
 
 export const products = [
   {
@@ -72,31 +72,50 @@ export const products = [
 
 const BestSellers = () => {
   const renderedProducts = products.map((product, index) => (
-    <ProductCard key={index} productData={product} />
+    <ProductCard
+      key={index}
+      productData={product}
+      className='h-44 !w-36 md:h-64 md:!w-60'
+    />
   ));
+
+  const { width } = useWindowSize();
+
   return (
-    <div className='my-8 relative max-w-cs overflow-x-hidden'>
-      <Image
+    <div
+      className='my-8 py-10 md:rounded-lg'
+      style={{ backgroundImage: "url('/images/home/best-sellers-bg.png')" }}>
+      {/* <Image
         width='1200'
         height='320'
         src='/images/home/best-sellers-bg.png'
         alt='best-sellers-bg'
         className='rounded-lg inline'
-      />
-      <div className='absolute right-0 top-0 w-full h-full flex items-center pr-16'>
+      /> */}
+      <div className='z-10 flex h-full w-full items-center pr-4 md:pr-16'>
         <div>
-          <h2 className='text-3xl text-center text-white font-bold mb-3'>
+          <h2 className='mb-3 text-center text-xl font-bold text-white md:text-3xl'>
             پـــــرفــــــــروش
             <br /> ‌تـریـــــــن‌هــای
             <br /> اخــیــــــــــــــــــــــر
           </h2>
-          <Button variant='white-outlined'>
+          <Button
+            variant='outline'
+            color='white'
+            borderColor='white'
+            size={'sm'}
+            className='w-[100px'>
             <span className='ml-2'>مشاهده همه کالاها</span>
             <ArrowLeftIcon />
           </Button>
         </div>
-        <div className='flex-1 flex gap-4 items-center px-6 overflow-hidden'>
-          <Swiper data={renderedProducts} slidesPerView={'auto'} radius='md' />
+        <div className='flex flex-1 items-center gap-4 overflow-hidden pr-3 md:px-6'>
+          <Swiper
+            data={renderedProducts}
+            slidesPerView={'auto'}
+            radius='md'
+            spaceBetween={width < 768 ? 4 : undefined}
+          />
         </div>
       </div>
     </div>

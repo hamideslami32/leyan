@@ -6,9 +6,9 @@ interface PopularCardProps {
 const PopularCard = (props: PopularCardProps) => {
   const { source } = props;
   return (
-    <div className='w-[291px] h-[200px]'>
+    <div>
       <img
-        className='w-full max-w-sm h-[200px] object-cover rounded-lg hover:opacity-90'
+        className='h-[200px] w-full rounded-lg object-cover hover:opacity-90'
         src={source}
         alt='popular'
       />
