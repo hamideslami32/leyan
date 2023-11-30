@@ -34,8 +34,8 @@ const SwiperCarousel = (props: CustomSwiperCarouselProps) => {
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       className={classNames('relative', radius && `rounded-${radius}`)}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={swiper => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
+      // onSwiper={swiper => console.log(swiper)}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       mousewheel
       observer
@@ -56,13 +56,13 @@ const SwiperCarousel = (props: CustomSwiperCarouselProps) => {
             id='prev'
             width='40'
             height='40'
-            className='text-white cursor-pointer z-10 absolute top-1/2 -translate-y-1/2 right-6'
+            className='absolute right-6 top-1/2 z-10 -translate-y-1/2 cursor-pointer text-white'
           />
           <LeftArrowCircle
             id='next'
             width='40'
             height='40'
-            className='text-white cursor-pointer z-10 absolute top-1/2 -translate-y-1/2 left-6'
+            className='absolute left-6 top-1/2 z-10 -translate-y-1/2 cursor-pointer text-white'
           />
         </>
       )}

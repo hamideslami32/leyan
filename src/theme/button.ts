@@ -32,6 +32,9 @@ export const Button = defineStyleConfig({
         bg: `${colorScheme}.700`,
       },
     }),
+    outline: () => ({
+      borderColor: 'secondary.400',
+    }),
   },
   defaultProps: {
     variant: 'black',

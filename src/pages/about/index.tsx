@@ -1,20 +1,21 @@
-import Image from "next/image";
-import { Fragment } from "react";
+import Image from 'next/image';
 
 const About = () => {
   return (
-    <div className="leading-7">
-      <div className="w-full relative z-0">
+    <div className='leading-7'>
+      <div className='relative z-0 w-full'>
         <Image
-          className="w-full h-[448px] object-cover"
+          className='h-[448px] w-full object-cover'
           width={1440}
           height={448}
-          src="/images/about-header.png"
-          alt="test"
+          src='/images/about-header.png'
+          alt='test'
         />
-        <div className="text-white z-[1] absolute inset-0 flex flex-col items-stretch justify-end p-6">
-          <div className="w-full mx-auto max-w-screen-xl">
-            <h1 className="font-extrabold text-3xl lg:text-5xl mb-3">گروه تجارت الکترونیک نوژن</h1>
+        <div className='absolute inset-0 z-[1] flex flex-col items-stretch justify-end p-6 text-white'>
+          <div className='mx-auto w-full max-w-screen-xl'>
+            <h1 className='mb-3 text-3xl font-extrabold lg:text-5xl'>
+              گروه تجارت الکترونیک نوژن
+            </h1>
             <p>
               گروه تجارت الکترونیک نوژن‌ اکنون به اکوسیستمی کامل برای تمامی
               کسب‌وکارهای آنلاین تبدیل شده است. رویکرد گروه نوژن‌ تکمیل زنجیره
@@ -24,12 +25,12 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="px-6 py-16">
-        <div className="w-full max-w-screen-xl mx-auto">
-          <div className="w-full flex flex-col items-stretch gap-8">
+      <div className='px-6 py-16'>
+        <div className='mx-auto w-full max-w-screen-xl'>
+          <div className='flex w-full flex-col items-stretch gap-8'>
             <section>
-              <h3 className="text-lg font-bold mb-2.5">خدمات پس از فروش</h3>
-              <p className="text-secondary-600">
+              <h3 className='mb-2.5 text-lg font-bold'>خدمات پس از فروش</h3>
+              <p className='text-secondary-600'>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
                 استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
@@ -66,8 +67,8 @@ const About = () => {
               </p>
             </section>
             <section>
-              <h3 className="text-lg font-bold mb-2.5">مرکز امور مشتریان</h3>
-              <p className="text-secondary-600">
+              <h3 className='mb-2.5 text-lg font-bold'>مرکز امور مشتریان</h3>
+              <p className='text-secondary-600'>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
                 استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد

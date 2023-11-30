@@ -30,6 +30,7 @@ export function useWindowSize(): WindowSize {
     return () => {
       window.removeEventListener('resize', debouncedHandleSize);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return windowSize;

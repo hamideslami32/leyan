@@ -18,7 +18,6 @@ import {
   StackDivider,
   Switch,
   Input,
-  InputRightElement,
   InputGroup,
   InputLeftElement,
 } from '@chakra-ui/react';

@@ -21,6 +21,7 @@ export const Input = helper.defineMultiStyleConfig({
   variants: {
     unstyled: {
       field: {
+        bgColor: 'secondary.200',
         _placeholder: {
           fontSize: '14px',
         },

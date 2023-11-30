@@ -1,10 +1,10 @@
 import Image from 'next/image';
-
-import SearchBar from '../search-bar/SearchBar';
 import Link from 'next/link';
-import { useWindowSize } from '@/utils/hooks/useWindowSize';
 import BasketButton from './BasketButton';
 import AuthButton from './AuthButton';
+import { useWindowSize } from '@/utils/hooks/useWindowSize';
+import DesktopSearch from '../search-bar/DesktopSearch';
+import MobileSearch from '../search-bar/MobileSearch';
 
 const Header = () => {
   const { width } = useWindowSize();
@@ -21,7 +21,7 @@ const Header = () => {
               draggable={false}
             />
           </Link>
-          <SearchBar />
+          {width > 768 ? <DesktopSearch /> : <MobileSearch />}
         </div>
         <div className='flex-end hidden gap-4 lg:flex'>
           <BasketButton />

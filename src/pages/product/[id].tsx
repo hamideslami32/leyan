@@ -25,7 +25,7 @@ import GuarantyIcon from '@/assets/icons/guaranty.svg';
 import SupportIcon from '@/assets/icons/support.svg';
 import OriginalityIcon from '@/assets/icons/originality.svg';
 import FastDeliveryIcon from '@/assets/icons/fast-delivery.svg';
-import StartsIcon from '@/assets/icons/star-filled.svg';
+import StarIcon from '@/assets/icons/star-filled.svg';
 import ShopIcon from '@/assets/icons/shop.svg';
 import SecurityIcon from '@/assets/icons/security-ok.svg';
 
@@ -203,11 +203,11 @@ const ProductDetailsPage = () => {
                     از 5
                   </Text>
                   <div className='flex gap-1'>
-                    <StartsIcon />
-                    <StartsIcon />
-                    <StartsIcon />
-                    <StartsIcon />
-                    <StartsIcon />
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
+                    <StarIcon />
                   </div>
                   <Text fontSize='sm' color='secondary.500'>
                     از مجموع 23 امتیاز

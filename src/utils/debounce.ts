@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { TimeoutId } from '@reduxjs/toolkit/dist/query/core/buildMiddleware/types';
 
 const debounce = <Params extends any[]>(

@@ -1,4 +1,4 @@
-import dayjs, { TStandardFormatOptions } from 'dayjs';
+import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import jalaliDay from 'jalaliday';
@@ -16,7 +16,10 @@ dayjs.extend(jalaliDay);
 const reg = /(\d{4})-\d{1,2}-\d{1,2}/;
 dayjs.extend((option, Dayjs) => {
   const proto = Dayjs.prototype;
+  console.log({ proto });
+  //@ts-ignore
   const oldParse = proto.parse;
+  //@ts-ignore
   proto.parse = function (cfg) {
     if (cfg.date && typeof cfg.date === 'string' && reg.test(cfg.date)) {
       const res = reg.exec(cfg.date);
@@ -24,16 +27,16 @@ dayjs.extend((option, Dayjs) => {
     }
     oldParse.bind(this)(cfg);
   };
-  proto.standardFormat = function (options?: TStandardFormatOptions) {
-    const {
-      template = 'YYYY-MM-DD',
-      jalali = false,
-      locale = 'en',
-    } = options || {};
-    return this.calendar(jalali ? 'jalali' : 'gregory')
-      .locale(locale)
-      .format(template);
-  };
+  // proto.standardFormat = function (options?: TStandardFormatOptions) {
+  //   const {
+  //     template = 'YYYY-MM-DD',
+  //     jalali = false,
+  //     locale = 'en',
+  //   } = options || {};
+  //   return this.calendar(jalali ? 'jalali' : 'gregory')
+  //     .locale(locale)
+  //     .format(template);
+  // };
 });
 // globalThis.dayjs = dayjs;
 export default dayjs;

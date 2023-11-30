@@ -1,11 +1,10 @@
 import { MutableRefObject } from 'react';
 import { useEventListener } from './useEventListener';
 
-type Handler = (event: MouseEvent) => void;
-
 function useClickOutside<T extends HTMLElement = HTMLElement>(
   ref: MutableRefObject<T | null>,
-  handler: Handler,
+  // eslint-disable-next-line no-unused-vars
+  handler: (event: MouseEvent) => void,
   mouseEvent: 'mousedown' | 'mouseup' = 'mousedown',
 ): void {
   useEventListener(mouseEvent, event => {

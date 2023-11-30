@@ -23,17 +23,18 @@ const bottomMenuData = [
   },
   {
     title: 'حساب کاربری',
-    link: '/profile',
     icon: <UserIcon />,
   },
 ];
 
 const BottomBar = () => {
   return (
-    <div className='shadow-custom fixed bottom-0 left-0 right-0 z-30 w-screen bg-white lg:hidden'>
+    <div className='shadow-custom fixed bottom-0 left-0 right-0 z-30 w-screen border bg-white lg:hidden'>
       <ul className='flex'>
         {bottomMenuData.map((item, index) => (
           <Button
+            as={Link}
+            href={item.link}
             h={14}
             key={index}
             variant={'text'}

@@ -1,9 +1,10 @@
 import CircleMinusIcon from '@/assets/icons/circle-minus.svg';
 import CirclePlusIcon from '@/assets/icons/circle-plus.svg';
+import { Dispatch, SetStateAction } from 'react';
 
 interface CounterProps {
   count: number;
-  setCount: (val: number) => void;
+  setCount: Dispatch<SetStateAction<number>>;
 }
 
 const Counter = (props: CounterProps) => {

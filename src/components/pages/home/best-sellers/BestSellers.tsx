@@ -102,9 +102,9 @@ const BestSellers = () => {
           <Button
             variant='outline'
             color='white'
+            w={'100px'}
             borderColor='white'
-            size={'sm'}
-            className='w-[100px'>
+            size={'sm'}>
             <span className='ml-2'>مشاهده همه کالاها</span>
             <ArrowLeftIcon />
           </Button>

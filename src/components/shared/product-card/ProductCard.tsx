@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import StarFilledIcon from '@/assets/icons/star-filled.svg';
-import { Box, LinkBox, LinkOverlay } from '@chakra-ui/react';
+import { LinkBox, LinkOverlay } from '@chakra-ui/react';
 import classNames from 'classnames';
 
 interface ProductCardProps {

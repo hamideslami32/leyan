@@ -14,12 +14,13 @@ import Link from 'next/link';
 import { ReactNode, useMemo } from 'react';
 
 const Home = () => {
-  const { width } = useWindowSize();
   const renderedDataCustomSlider: ReactNode[] = useMemo(() => {
     return products.map((product, i) => (
       <ProductCard isBordered productData={product} key={i} showRating />
     ));
   }, []);
+
+  const { width } = useWindowSize();
 
   const firstSliderData: ReactNode[] = useMemo(() => {
     return [...new Array(5)].map((_, i) => (
