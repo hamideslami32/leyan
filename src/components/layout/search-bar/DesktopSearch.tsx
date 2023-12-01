@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRef, useState } from 'react';
-import { Card, Fade, Input, Link } from '@chakra-ui/react';
+import { Card, Input, Link } from '@chakra-ui/react';
 
 import SearchIcon from '@/assets/icons/search.svg';
 
@@ -80,36 +80,34 @@ const DesktopSearch = () => {
         />
       </div>
       {isOpen && (
-        <Fade in={isOpen}>
-          <Card
-            maxW={600}
-            ref={searchListRef}
-            position={'absolute'}
-            className='-top-0'>
-            <SearchInput isOpen={isOpen} setIsOpen={setIsOpen} />
-            <Link className='flex flex-col'>
-              <img
-                alt='search-banner'
-                src='/images/search-sample.png'
-                className='rounded-lg object-cover p-4'
-              />
-            </Link>
-            <div className='my-4 pr-4'>
-              <div className='flex items-center'>
-                <ClockIcon />
-                <span className='mr-3'>آخرین جستجو های شما</span>
-              </div>
-              <LinkList data={lastSearchData} />
+        <Card
+          maxW={600}
+          ref={searchListRef}
+          position={'absolute'}
+          className='-top-0'>
+          <SearchInput isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Link className='flex flex-col'>
+            <img
+              alt='search-banner'
+              src='/images/search-sample.png'
+              className='rounded-lg object-cover p-4'
+            />
+          </Link>
+          <div className='my-4 pr-4'>
+            <div className='flex items-center'>
+              <ClockIcon />
+              <span className='mr-3'>آخرین جستجو های شما</span>
             </div>
-            <div className='my-8 pr-4'>
-              <div className='flex items-center'>
-                <FireIcon />
-                <span className='mr-3'>پرطرفدارترین جستجو‌ها</span>
-              </div>
-              <LinkList data={mostPopularData} />
+            <LinkList data={lastSearchData} />
+          </div>
+          <div className='my-8 pr-4'>
+            <div className='flex items-center'>
+              <FireIcon />
+              <span className='mr-3'>پرطرفدارترین جستجو‌ها</span>
             </div>
-          </Card>
-        </Fade>
+            <LinkList data={mostPopularData} />
+          </div>
+        </Card>
       )}
     </div>
   );
