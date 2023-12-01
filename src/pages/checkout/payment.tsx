@@ -1,5 +1,11 @@
+import Stepper from '@/components/shared/stepper/Stepper';
+
 const payment = () => {
-  return <div>payment</div>;
+  return (
+    <div>
+      <Stepper activeStep={2} />
+    </div>
+  );
 };
 
 export default payment;
