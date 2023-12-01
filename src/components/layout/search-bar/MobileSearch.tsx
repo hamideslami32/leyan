@@ -1,30 +1,53 @@
 /* eslint-disable @next/next/no-img-element */
 import {
+  Button,
+  IconButton,
   Link,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
+  ModalHeader,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 
-import ClockIcon from '@/assets/icons/clock.svg';
-import FireIcon from '@/assets/icons/fire.svg';
 import LinkList from './LinkList';
 import { lastSearchData, mostPopularData } from './DesktopSearch';
 import SearchInput from './SearchInput';
+
+import ClockIcon from '@/assets/icons/clock.svg';
+import FireIcon from '@/assets/icons/fire.svg';
+import SearchIcon from '@/assets/icons/search.svg';
+import ArrowRightIcon from '@/assets/icons/arrow-right.svg';
 
 const MobileSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <SearchInput isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Button
+        as={Button}
+        onClick={() => setIsOpen(true)}
+        rounded={'lg'}
+        justifyContent={'start'}
+        leftIcon={<SearchIcon className={isOpen ? '' : 'text-gray-400'} />}
+        className='text !flex w-full justify-start !bg-gray-100  !text-sm !text-gray-400'>
+        جستجو در محصولات
+      </Button>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} size={'full'}>
-        <ModalContent>
-          <ModalBody className='bg-white' px={4}>
-            <ModalCloseButton />
-            <div className='mt-10'>
+        <ModalContent bg={'white'}>
+          <ModalHeader px={4} py={2}>
+            <IconButton
+              aria-label='back'
+              w={12}
+              height={12}
+              icon={<ArrowRightIcon />}
+              variant={'outline'}
+              rounded={'xl'}
+              onClick={() => setIsOpen(false)}
+            />
+          </ModalHeader>
+          <ModalBody px={4}>
+            <div>
               <SearchInput isOpen={isOpen} setIsOpen={setIsOpen} />
               <Link className='flex flex-col'>
                 <img

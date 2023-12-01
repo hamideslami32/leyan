@@ -10,20 +10,16 @@ interface SearchInputProps {
 }
 
 const SearchInput = (props: SearchInputProps) => {
-  const { setIsOpen, isOpen } = props;
+  const { isOpen } = props;
   const searchRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (searchRef.current?.focus) {
-      searchRef.current.addEventListener('focus', () => {
-        setIsOpen(true);
-      });
-      searchRef.current.addEventListener('blur', () => {
-        setIsOpen(false);
-      });
-    }
+    if (searchRef.current) searchRef.current.focus();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  searchRef?.current?.focus();
 
   return (
     <div
@@ -36,7 +32,7 @@ const SearchInput = (props: SearchInputProps) => {
         name='search'
         bgColor='transparent'
         ref={searchRef}
-        className='bg-transpar mr-2 h-full w-full px-1'
+        className='bg-transpar h-full w-full px-1'
         placeholder='جستجو در محصولات'
       />
     </div>

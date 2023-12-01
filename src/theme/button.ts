@@ -35,6 +35,9 @@ export const Button = defineStyleConfig({
     outline: () => ({
       borderColor: 'secondary.400',
     }),
+    search: () => ({
+      bg: 'gray.100',
+    }),
   },
   defaultProps: {
     variant: 'black',
