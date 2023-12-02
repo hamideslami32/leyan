@@ -10,7 +10,7 @@ import SeedsIcon from '@/assets/icons/seeds.svg';
 import PesticidesIcon from '@/assets/icons/pesticides.svg';
 import GardenFurnitureIcon from '@/assets/icons/garden-furniture.svg';
 
-const mainCategories = [
+export const mainCategories = [
   {
     icon: <FarmingEquipmentIcon />,
     title: 'ادوات کشاورزی',

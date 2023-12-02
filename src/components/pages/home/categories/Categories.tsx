@@ -7,7 +7,7 @@ export interface CategoriesProps {
   hasPadding?: boolean;
 }
 
-const categoriesData = [
+export const categoriesData = [
   {
     link: '/',
     title: 'ابزارآلات کشاورزی',
