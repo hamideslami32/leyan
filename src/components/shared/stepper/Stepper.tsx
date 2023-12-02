@@ -40,7 +40,7 @@ const Stepper = (props: StepperProps) => {
               icon={item.icon}
               title={item.title}
               isLast={stepperData.length === index + 1}
-              isPassed={activeStep >= index}
+              isActive={activeStep >= index}
             />
           );
         })}

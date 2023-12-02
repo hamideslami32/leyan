@@ -6,17 +6,17 @@ export interface StepperItemProps {
   icon: ReactNode;
   title: string;
   isLast: boolean;
-  isPassed: boolean;
+  isActive: boolean;
 }
 
 const StepperItem = (props: StepperItemProps) => {
-  const { icon, title, isLast, isPassed } = props;
+  const { icon, title, isLast, isActive } = props;
   return (
     <>
       <div
         className={classNames(
           'flex items-center gap-2',
-          isPassed && 'text-success',
+          isActive && 'text-success',
         )}>
         {icon}
         <Text fontSize='lg'>{title}</Text>
