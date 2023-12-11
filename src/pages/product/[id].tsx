@@ -28,6 +28,7 @@ import FastDeliveryIcon from '@/assets/icons/fast-delivery.svg';
 import StarIcon from '@/assets/icons/star-filled.svg';
 import ShopIcon from '@/assets/icons/shop.svg';
 import SecurityIcon from '@/assets/icons/security-ok.svg';
+import { useRouter } from 'next/router';
 
 const facilitiesData = [
   {
@@ -65,6 +66,25 @@ const tabbarProduct = [
   },
 ];
 
+const breadcrumbData = [
+  {
+    link: '/',
+    title: 'پالیزبان',
+  },
+  {
+    link: '/products/farming-equipment',
+    title: 'ادوات کشاورزی',
+  },
+  {
+    link: '/products/farming-equipment/tractor-supply',
+    title: 'ملزومات تراکتور',
+  },
+  {
+    link: '/product/fluid-pump',
+    title: 'پمپ سیالات آبارا',
+  },
+];
+
 const ProductDetailsPage = () => {
   const renderedDataCustomSlider: ReactNode[] = useMemo(() => {
     return products.map((product, i) => (
@@ -72,25 +92,20 @@ const ProductDetailsPage = () => {
     ));
   }, []);
 
+  const router = useRouter();
+
   return (
     <>
       <section className='mx-auto w-full max-w-cs space-y-10 py-8'>
         <Breadcrumb spacing='8px' separator='/'>
-          <BreadcrumbItem color='secondary.500'>
-            <BreadcrumbLink href='#'>پالیزبان</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem color='secondary.500'>
-            <BreadcrumbLink href='#'>ادوات کشاورزی</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem color='secondary.500'>
-            <BreadcrumbLink href='#'>ملزومات تراکتور</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem color='secondary.500'>
-            <BreadcrumbLink href='#'>بیل تراکتوری</BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href='#'>پمپ سیالات آبار پمپ</BreadcrumbLink>
-          </BreadcrumbItem>
+          {breadcrumbData.map((item, index) => (
+            <BreadcrumbItem
+              key={index}
+              isCurrentPage={item.link === router.asPath}
+              color='secondary.500'>
+              <BreadcrumbLink href={item.link}>{item.title}</BreadcrumbLink>
+            </BreadcrumbItem>
+          ))}
         </Breadcrumb>
         <ProductDetails />
       </section>
@@ -155,7 +170,7 @@ const ProductDetailsPage = () => {
               <Text as='b' fontSize='lg'>
                 معرفی محصولات
               </Text>
-              <ExpandableText noOfLines={4}>
+              <ExpandableText noOfLines={2}>
                 <Text lineHeight={7} color='secondary.600'>
                   گوشی موبایل iPhone 13 CH پرچم‌دار جدید شرکت اپل است که با چند
                   ویژگی جدید و دوربین دوگانه روانه بازار شده است. نمایشگر آیفون
@@ -173,7 +188,7 @@ const ProductDetailsPage = () => {
               <Text as='b' fontSize='lg'>
                 بررسی تخصصی
               </Text>
-              <ExpandableText noOfLines={4}>
+              <ExpandableText noOfLines={2}>
                 <Text lineHeight={7} color='secondary.600'>
                   گوشی موبایل iPhone 13 CH گوشی موبایل iPhone 13 CH پرچم‌دار
                   جدید شرکت اپل است که با چند ویژگی جدید و دوربین دوگانه روانه

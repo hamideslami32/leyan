@@ -3,19 +3,19 @@ import PopularCard from './PopularCard';
 
 const popularItems = [
   {
-    link: '/',
+    link: '/landing/test-1',
     imageUrl: '/images/home/popular/1.png',
   },
   {
-    link: '/',
+    link: '/landing/test-2',
     imageUrl: '/images/home/popular/2.png',
   },
   {
-    link: '/',
+    link: '/landing/test-3',
     imageUrl: '/images/home/popular/3.png',
   },
   {
-    link: '/',
+    link: '/landing/test-4',
     imageUrl: '/images/home/popular/4.png',
   },
 ];
