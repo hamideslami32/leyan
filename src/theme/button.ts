@@ -34,6 +34,14 @@ export const Button = defineStyleConfig({
     }),
     outline: () => ({
       borderColor: 'secondary.400',
+      _hover: {
+        bg: `secondary.200`,
+      },
+    }),
+    text: () => ({
+      _hover: {
+        bg: `secondary.200`,
+      },
     }),
     search: () => ({
       bg: 'gray.100',

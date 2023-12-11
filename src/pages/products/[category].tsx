@@ -28,14 +28,31 @@ import SortButton from '@/components/pages/product-list-page/SortButton';
 import { products } from '@/components/pages/home/best-sellers/BestSellers';
 
 import SortIcon from '@/assets/icons/sort.svg';
-import BlueTrashIcon from '@/assets/icons/blue-trash.svg';
+import FilterIcon from '@/assets/icons/filter.svg';
+import TrashIcon from '@/assets/icons/trash.svg';
 import SearchIcon from '@/assets/icons/search.svg';
+
+const breadcrumbData = [
+  {
+    title: 'پالیزبان',
+    link: '/',
+  },
+  {
+    title: 'ادوات کشاورزی',
+    link: '/categories/farming-equipment',
+  },
+  {
+    title: 'ملزومات تراکتور',
+    link: '/categories/farming-equipment/tractor-supply',
+  },
+];
 
 const ProductList = () => {
   const productCards = useMemo(
     () =>
       products.map((product, idx) => (
         <ProductCard
+          width='full'
           showRating
           autoWidth
           isBordered
@@ -47,150 +64,171 @@ const ProductList = () => {
   );
 
   return (
-    <div className='px-6 py-12'>
-      <div className='mx-auto max-w-cs'>
-        <Breadcrumb color='secondary.600' fontSize='sm' mb={6}>
-          <BreadcrumbItem>
-            <BreadcrumbLink href='#'>Home</BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem>
-            <BreadcrumbLink href='#'>Docs</BreadcrumbLink>
-          </BreadcrumbItem>
-
-          <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink href='#'>Breadcrumb</BreadcrumbLink>
-          </BreadcrumbItem>
-        </Breadcrumb>
-
-        <Heading as='h1' mb={6}>
-          ملزومات تراکتور
-        </Heading>
-
-        <Box as='section' mb={6}>
-          <Heading as='h2' fontSize='lg' mb={5}>
-            دسته بندی ها
-          </Heading>
-          <Categories
-            showTitle={false}
-            centerItems={false}
-            hasPadding={false}
-          />
-        </Box>
-
-        <Flex gap={6} align='flex-start'>
-          <Box
-            bg='#ffffff'
-            rounded='md'
-            shadow='lg'
-            p={4}
-            w='282px'
-            flexShrink={0}>
-            <Flex justify='space-between' mb={8}>
-              <Text fontWeight={700} fontSize='xl' color='secondary.900'>
-                فیلترها
-              </Text>
-              <Button
-                gap={1}
-                fontSize='sm'
-                color='#2E83FD'
-                variant='unstyled'
-                size='unsized'>
-                <BlueTrashIcon />
-                حذف فیلترها
-              </Button>
-            </Flex>
-            <Stack spacing={3} divider={<StackDivider color='secondary.300' />}>
-              <Accordion allowMultiple variant='filter'>
-                <AccordionItem>
-                  <AccordionButton>
-                    <Box as='span' flex='1' textAlign='right'>
-                      برند ها
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel>
-                    <InputGroup variant='unstyled' size='unsized'>
-                      <InputLeftElement
-                        right='12px'
-                        w='24px'
-                        h='24px'
-                        top='50%'
-                        pointerEvents='none'
-                        transform='translateY(-50%)'>
-                        <SearchIcon className='text-secondary-500' />
-                      </InputLeftElement>
-                      <Input
-                        h='40px'
-                        placeholder='جستجو در برند‌ ...'
-                        rounded='md'
-                        pr='42px'
-                        variant='search'
-                        size='search'
-                        bg='secondary.200'
-                      />
-                    </InputGroup>
-
-                    <Switch size='filter' variant='filter' />
-                  </AccordionPanel>
-                </AccordionItem>
-              </Accordion>
-              <Accordion allowMultiple variant='filter'>
-                <AccordionItem>
-                  <AccordionButton>
-                    <Box as='span' flex='1' textAlign='right'>
-                      برند ها
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-
-                  <AccordionPanel>
-                    بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
-                    پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای داخلی
-                    دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل لوفت‌هانزا،
-                    امارات، قطرایرویز، ترکیش‌ایر، ایرفرانس، کی‌ال‌ام، آئروفلوت،
-                    آلیتالیا، اوکراینی، ایرایژیا، پگاسوس و ده‌ها ایرلاین دیگر در
-                    علی‌بابا قابل تهیه هستند. همچنین بلیط پروازهای خارجیِ شرکت
-                    های هواپیمایی داخلی مانند ماهان، ایران‌ایر، قشم ایر، آتا و
-                    .. نیز روی سایت علی‌بابا به فروش می‌رسد.
-                  </AccordionPanel>
-                </AccordionItem>
-              </Accordion>
-            </Stack>
-          </Box>
-          <Box flexGrow={1}>
-            <Flex
-              gap={3}
-              px={3}
-              alignItems='center'
-              bg='secondary.100'
-              h='56px'
-              mb={8}
-              rounded='base'>
-              <Flex gap={2}>
-                <SortIcon />
-                <Text>مرتب سازی:</Text>
-              </Flex>
-              <SortButton>پربازدیدترین</SortButton>
-              <SortButton>جدیدترین</SortButton>
-              <SortButton active>پرفروش‌ترین</SortButton>
-              <SortButton>ارزان‌ترین</SortButton>
-              <SortButton>گران‌ترین</SortButton>
-              <SortButton>سریع‌ترین ارسال</SortButton>
-              <SortButton>پیشنهاد خریداران</SortButton>
-
-              <Text fontSize='sm' color='secondary.600' mr='auto'>
-                3,093,488 کالا
-              </Text>
-            </Flex>
-            <Grid gridTemplateColumns='1fr 1fr 1fr' gap={6}>
-              {productCards}
-            </Grid>
-          </Box>
-        </Flex>
+    <>
+      <div className='h-12 border-b bg-white md:hidden'>
+        <Button variant={'text'} leftIcon={<FilterIcon />}>
+          فیلترها
+        </Button>
+        <Button variant={'text'} leftIcon={<SortIcon />}>
+          پربازدیدترین
+        </Button>
       </div>
-    </div>
+      <div className='px-4 pb-28 pt-8'>
+        <div className='mx-auto max-w-cs'>
+          <Breadcrumb
+            color='secondary.600'
+            fontSize='sm'
+            mb={6}
+            display={{ base: 'none', md: 'flex' }}>
+            {breadcrumbData.map((item, index) => (
+              <BreadcrumbItem key={index} isCurrentPage>
+                <BreadcrumbLink href={item.link}>{item.title}</BreadcrumbLink>
+              </BreadcrumbItem>
+            ))}
+          </Breadcrumb>
+
+          <Heading as='h1' mb={6}>
+            ملزومات تراکتور
+          </Heading>
+
+          <Box as='section' mb={6}>
+            <Heading as='h2' fontSize='lg' mb={5}>
+              دسته بندی ها
+            </Heading>
+            <Categories
+              showTitle={false}
+              centerItems={false}
+              hasPadding={false}
+            />
+          </Box>
+
+          <Flex
+            gap={6}
+            align='flex-start'
+            flexDirection={{ base: 'column', md: 'row' }}>
+            <Box
+              display={{ base: 'none', md: 'block' }}
+              bg='#ffffff'
+              rounded='md'
+              shadow='lg'
+              p={4}
+              w='282px'
+              flexShrink={0}>
+              <Flex justify='space-between' mb={8}>
+                <Text fontWeight={700} fontSize='xl' color='secondary.900'>
+                  فیلترها
+                </Text>
+                <Button
+                  gap={1}
+                  size='sm'
+                  color='#2E83FD'
+                  variant='text'
+                  leftIcon={<TrashIcon width='20' height='20' />}>
+                  حذف فیلترها
+                </Button>
+              </Flex>
+              <Stack
+                spacing={3}
+                divider={<StackDivider color='secondary.300' />}>
+                <Accordion allowMultiple variant='filter'>
+                  <AccordionItem>
+                    <AccordionButton>
+                      <Box as='span' flex='1' textAlign='right'>
+                        برند ها
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+
+                    <AccordionPanel>
+                      <InputGroup variant='unstyled' size='unsized'>
+                        <InputLeftElement
+                          right='12px'
+                          w='24px'
+                          h='24px'
+                          top='50%'
+                          pointerEvents='none'
+                          transform='translateY(-50%)'>
+                          <SearchIcon className='text-secondary-500' />
+                        </InputLeftElement>
+                        <Input
+                          h='40px'
+                          placeholder='جستجو در برند‌ ...'
+                          rounded='md'
+                          pr='42px'
+                          variant='search'
+                          size='search'
+                          bg='secondary.200'
+                        />
+                      </InputGroup>
+
+                      <Switch size='filter' variant='filter' />
+                    </AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
+                <Accordion allowMultiple variant='filter'>
+                  <AccordionItem>
+                    <AccordionButton>
+                      <Box as='span' flex='1' textAlign='right'>
+                        برند ها
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+
+                    <AccordionPanel>
+                      بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
+                      پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای
+                      داخلی دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل
+                      لوفت‌هانزا، امارات، قطرایرویز، ترکیش‌ایر، ایرفرانس،
+                      کی‌ال‌ام، آئروفلوت، آلیتالیا، اوکراینی، ایرایژیا، پگاسوس و
+                      ده‌ها ایرلاین دیگر در علی‌بابا قابل تهیه هستند. همچنین
+                      بلیط پروازهای خارجیِ شرکت های هواپیمایی داخلی مانند ماهان،
+                      ایران‌ایر، قشم ایر، آتا و .. نیز روی سایت علی‌بابا به فروش
+                      می‌رسد.
+                    </AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
+              </Stack>
+            </Box>
+            <Box flexGrow={1} w={'full'}>
+              <Flex
+                display={{ base: 'none', lg: 'flex' }}
+                gap={3}
+                px={3}
+                alignItems='center'
+                bg='secondary.100'
+                h='56px'
+                mb={8}
+                rounded='base'>
+                <Flex gap={2}>
+                  <SortIcon />
+                  <Text>مرتب سازی:</Text>
+                </Flex>
+                <SortButton>پربازدیدترین</SortButton>
+                <SortButton>جدیدترین</SortButton>
+                <SortButton active>پرفروش‌ترین</SortButton>
+                <SortButton>ارزان‌ترین</SortButton>
+                <SortButton>گران‌ترین</SortButton>
+                {/* <SortButton>سریع‌ترین ارسال</SortButton>
+              <SortButton>پیشنهاد خریداران</SortButton> */}
+
+                <Text fontSize='sm' color='secondary.600' mr='auto'>
+                  3,093,488 کالا
+                </Text>
+              </Flex>
+              <Grid
+                gridTemplateColumns={{
+                  base: '1fr',
+                  md: '1fr 1fr',
+                  lg: '1fr 1fr 1fr',
+                }}
+                gap={6}>
+                {productCards}
+              </Grid>
+            </Box>
+          </Flex>
+        </div>
+      </div>
+    </>
   );
 };
 

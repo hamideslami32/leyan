@@ -8,6 +8,7 @@ interface ProductCardProps {
   showRating?: boolean;
   autoWidth?: boolean;
   isBordered?: boolean;
+  width?: string;
   productData: {
     title: string;
     remaining: string;
@@ -22,6 +23,7 @@ const ProductCard = (props: ProductCardProps) => {
     showRating = false,
     productData,
     autoWidth,
+    width,
     isBordered,
     className,
   } = props;
@@ -31,7 +33,7 @@ const ProductCard = (props: ProductCardProps) => {
       display='flex'
       flexDirection='column'
       rounded='md'
-      w={autoWidth ? 'auto' : '240px'}
+      w={width ? width : autoWidth ? 'auto' : '240px'}
       className={classNames(className)}
       border={isBordered ? 'solid 1px' : 'none'}
       borderColor='secondary.300'
@@ -44,7 +46,7 @@ const ProductCard = (props: ProductCardProps) => {
         />
       </div>
       <div className='flex flex-1 flex-col justify-between p-1 md:p-4'>
-        <LinkOverlay href='/' className='text-sm'>
+        <LinkOverlay href='/product/test' className='text-sm'>
           {productData.title}
         </LinkOverlay>
         {showRating && (

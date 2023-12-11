@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,22 +10,22 @@ export interface CategoriesProps {
 
 export const categoriesData = [
   {
-    link: '/',
+    link: '/products/farming-equipments',
     title: 'ابزارآلات کشاورزی',
     imageUrl: '/images/home/categories/1.png',
   },
   {
-    link: '/',
+    link: '/products/pesticides',
     title: 'سموم و آفت‌کش',
     imageUrl: '/images/home/categories/2.png',
   },
   {
-    link: '/',
+    link: '/products/farming-machinary',
     title: 'ماشین‌آلات کشاورزی',
     imageUrl: '/images/home/categories/3.png',
   },
   {
-    link: '/',
+    link: '/products/gardening-furniture',
     title: 'دکوراسیون باغی',
     imageUrl: '/images/home/categories/4.png',
   },
@@ -39,9 +40,10 @@ const Categories = (props: CategoriesProps) => {
         <h2 className='mb-6 text-center text-xl font-bold'>دسته‌بندی‌ها</h2>
       )}
       <div
-        className={`flex flex-wrap ${
-          centerItems ? 'justify-center' : 'justify-start'
-        } gap-16`}>
+        className={classNames(
+          `flex flex-wrap justify-center gap-8`,
+          !centerItems && 'lg:!justify-start',
+        )}>
         {categoriesData.map((item, index) => (
           <Link
             href={item.link}
