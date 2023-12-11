@@ -40,7 +40,7 @@ const ProductCard = (props: ProductCardProps) => {
         <img
           alt='product-1'
           src='/images/product-sample.png'
-          className='roundend-t-md mx-auto max-h-full object-scale-down'
+          className='mx-auto max-h-full rounded-t-md object-scale-down'
         />
       </div>
       <div className='flex flex-1 flex-col justify-between p-1 md:p-4'>
