@@ -7,14 +7,19 @@ const Basket = () => {
   return (
     <div className='mx-auto mb-10 max-w-cs'>
       <Stepper activeStep={0} />
-      <Heading mb={6} mt={10} size={'lg'}>
+      <Heading
+        display={{ base: 'none', md: 'block' }}
+        mb={6}
+        mt={10}
+        size={'lg'}>
         سبد خرید شما
       </Heading>
-      <div className='flex gap-4'>
-        <div className='flex-1'>
+      <div className='flex flex-col gap-4 pb-16 md:flex-row'>
+        <div className='flex flex-1 flex-col md:gap-4'>
+          <BasketItem />
           <BasketItem />
         </div>
-        <div className='w-[300px]'>
+        <div className='md:w-[300px]'>
           <Invoice />
         </div>
       </div>
