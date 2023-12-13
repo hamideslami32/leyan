@@ -6,15 +6,14 @@ import Counter from '@/components/shared/counter/Counter';
 import { useState } from 'react';
 
 const BasketItem = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   return (
     <Box
-      className='flex gap-4'
-      borderRadius={'md'}
-      border={'1px solid'}
+      className='relative flex w-full gap-4 border-b md:border'
+      borderRadius={{ base: 'none', md: 'md' }}
       borderColor={'secondary.300'}
-      px={6}
+      px={{ base: 2, md: 6 }}
       py={7}
       h={64}>
       <div className='flex h-28 w-28 rounded-md border p-2'>
@@ -25,7 +24,9 @@ const BasketItem = () => {
         />
       </div>
       <div className='flex-1'>
-        <div>الکتروپمپ پلی اتیلن 0.5 اسب بخار آبار پمپ مدل PM16</div>
+        <div className='font-bold md:text-lg'>
+          الکتروپمپ پلی اتیلن 0.5 اسب بخار آبار پمپ مدل PM16
+        </div>
         <div className='my-6 flex flex-col gap-2 text-sm text-secondary-600'>
           <div className='flex items-center gap-1'>
             <span className='inline-block h-4 w-4 rounded-full bg-info'></span>
@@ -48,7 +49,7 @@ const BasketItem = () => {
           </div>
         </div>
         <div className='flex items-center justify-between'>
-          <div className='flex items-center gap-3'>
+          <div className='absolute right-2 mt-6 flex select-none items-center gap-3 md:static md:mt-0'>
             <div className='rounded-lg border border-secondary-900 px-3 py-2'>
               <Counter count={count} setCount={setCount} />
             </div>
@@ -59,7 +60,9 @@ const BasketItem = () => {
               ۱۲,۰۰۰ تومان تخفیف
             </div>
           </div>
-          <div className='text-xs text-secondary-600'>قیمت فروشنده</div>
+          <div className='hidden text-xs text-secondary-600 md:block'>
+            قیمت فروشنده
+          </div>
         </div>
       </div>
     </Box>

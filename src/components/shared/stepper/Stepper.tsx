@@ -31,7 +31,7 @@ const stepperData: Step[] = [
 const Stepper = (props: StepperProps) => {
   const { activeStep } = props;
   return (
-    <div className='mx-auto max-w-[690px] py-10 text-gray-500'>
+    <div className='mx-auto hidden max-w-[690px] py-10 text-gray-500 md:block'>
       <div className='flex items-center gap-4'>
         {stepperData.map((item, index) => {
           return (

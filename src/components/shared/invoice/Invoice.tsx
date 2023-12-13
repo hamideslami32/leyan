@@ -3,7 +3,7 @@ import InvoiceRow from './InvoiceRow';
 
 const Invoice = () => {
   return (
-    <div className='flex flex-col gap-3 rounded-md bg-gray-100 p-4'>
+    <div className='flex flex-col gap-3 p-4 md:rounded-md md:bg-gray-100'>
       <InvoiceRow title='قیمت کالا‌ها' price={28000} />
       <InvoiceRow color='error.500' title='تخفیف' price={8000} />
       <Divider />
