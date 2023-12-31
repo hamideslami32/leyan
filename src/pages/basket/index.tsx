@@ -19,13 +19,17 @@ const Basket = () => {
         size={'lg'}>
         سبد خرید شما
       </Heading>
-      <div className='flex flex-col gap-4 pb-16 md:flex-row'>
+      <div className='flex flex-col gap-6 pb-16 md:flex-row'>
         <div className='flex flex-1 flex-col md:gap-4'>
           <BasketItem />
           <BasketItem />
         </div>
         <div className='md:w-[300px]'>
           <Invoice />
+          <div className='pt-3 text-sm text-secondary-600'>
+            هزینه این سفارش هنوز پرداخت نشده‌ و در صورت اتمام موجودی، کالاها از
+            سبد حذف می‌شوند
+          </div>
         </div>
       </div>
     </div>

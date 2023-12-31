@@ -15,7 +15,7 @@ export const theme = extendTheme(
       heading: `peyda, sans-serif`,
       body: `peyda, sans-serif`,
     },
-    colors: {...colors},
+    colors: { ...colors },
     direction: 'rtl',
     components: {
       Input,

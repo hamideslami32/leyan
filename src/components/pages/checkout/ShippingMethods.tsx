@@ -6,7 +6,7 @@ const ShippingMethods = () => {
   return (
     <div>
       <h2 className='mb-6 text-2xl font-bold'>نحوه ارسال</h2>
-      <RadioGroup defaultValue='tipax' className='rounded-md border p-4'>
+      <RadioGroup defaultValue='tipax' className='rounded-md p-4 md:border'>
         <div className='flex items-center justify-between'>
           <div className='flex items-center gap-4'>
             <Radio value='tipax' size={'lg'} />
