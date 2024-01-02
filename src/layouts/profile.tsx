@@ -95,7 +95,7 @@ const ProfileLayout = ({ children }: { children: ReactNode }) => {
           </div>
         </div>
       </div>
-      <div className='flex-1 rounded-md border'>{children}</div>
+      <div className='flex-1 rounded-md'>{children}</div>
     </div>
   );
 };
