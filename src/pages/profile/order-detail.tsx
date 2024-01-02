@@ -1,5 +1,7 @@
+import ProfileLayout from '@/layouts/profile';
+
 const OrderDetail = () => {
-  return <div>OrderDetail</div>;
+  return <ProfileLayout>OrderDetail</ProfileLayout>;
 };
 
 export default OrderDetail;

@@ -1,5 +1,7 @@
+import ProfileLayout from '@/layouts/profile';
+
 const Comments = () => {
-  return <div>Comments</div>;
+  return <ProfileLayout>Comments</ProfileLayout>;
 };
 
 export default Comments;

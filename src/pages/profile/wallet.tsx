@@ -1,5 +1,7 @@
+import ProfileLayout from '@/layouts/profile';
+
 const Wallet = () => {
-  return <div>Wallet</div>;
+  return <ProfileLayout>Wallet</ProfileLayout>;
 };
 
 export default Wallet;
