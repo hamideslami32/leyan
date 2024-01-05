@@ -31,7 +31,7 @@ const tableData = [
 const Wallet = () => {
   return (
     <ProfileLayout>
-      <h1 className='text-xl font-bold'>سفارش های من</h1>
+      <h1 className='text-xl font-bold'>کیف پول</h1>
       <div className='my-8 flex justify-between rounded-md border p-4'>
         <div className='flex flex-col gap-4'>
           <div className='font-bold'>موجودی کیف پول</div>
