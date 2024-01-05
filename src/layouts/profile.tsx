@@ -41,7 +41,7 @@ const sideBarItems = [
 const ProfileLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className='mx-auto my-6 flex max-w-cs gap-8'>
-      <div className='flex min-h-[500px] w-[280px] flex-col gap-5 rounded-md p-3 shadow-cs'>
+      <div className='flex w-[280px] flex-col gap-5 rounded-md p-3 shadow-cs'>
         <div className='flex gap-2'>
           <Image
             width='56'
