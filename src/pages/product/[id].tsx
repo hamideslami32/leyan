@@ -29,6 +29,8 @@ import StarIcon from '@/assets/icons/star-filled.svg';
 import ShopIcon from '@/assets/icons/shop.svg';
 import SecurityIcon from '@/assets/icons/security-ok.svg';
 import { useRouter } from 'next/router';
+import Portal from '@/utils/portal';
+import HeaderPortalTitle from '@/components/shared/header-portal-title/HeaderPortalTitle';
 
 const facilitiesData = [
   {
@@ -96,6 +98,9 @@ const ProductDetailsPage = () => {
 
   return (
     <>
+      <Portal destination='mobile-header-portal'>
+        <HeaderPortalTitle title='' />
+      </Portal>
       <section className='mx-auto w-full max-w-cs space-y-10 py-8'>
         <Breadcrumb spacing='8px' separator='/'>
           {breadcrumbData.map((item, index) => (

@@ -101,12 +101,11 @@ const BestSellers = () => {
           </h2>
           <Button
             variant='outline'
+            rightIcon={<ArrowLeftIcon />}
             color='white'
-            w={'100px'}
             borderColor='white'
             size={'sm'}>
-            <span className='ml-2'>مشاهده همه کالاها</span>
-            <ArrowLeftIcon />
+            مشاهده همه کالاها
           </Button>
         </div>
         <div className='flex flex-1 items-center gap-4 overflow-hidden pr-3 md:px-6'>

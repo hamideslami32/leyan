@@ -13,6 +13,8 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import ArrowLeftIcon from '@/assets/icons/arrow-left.svg';
 import { categoriesData } from '@/components/pages/home/categories/Categories';
+import Portal from '@/utils/portal';
+import MobileSearch from '@/components/layout/search-bar/MobileSearch';
 
 const Categories = () => {
   const { width } = useWindowSize();
@@ -22,9 +24,12 @@ const Categories = () => {
 
   return (
     <div className='overflow-y-scsroll'>
+      <Portal destination='mobile-header-portal'>
+        <MobileSearch />
+      </Portal>
       <Accordion allowToggle>
         {mainCategories.map((category, index) => (
-          <AccordionItem key={index} className='border-b p-2'>
+          <AccordionItem key={index} className='border-b'>
             <h2>
               <AccordionButton h={16}>
                 <Box

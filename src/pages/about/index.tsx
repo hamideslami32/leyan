@@ -1,8 +1,13 @@
+import HeaderPortalTitle from '@/components/shared/header-portal-title/HeaderPortalTitle';
+import Portal from '@/utils/portal';
 import Image from 'next/image';
 
 const About = () => {
   return (
     <div className='leading-7'>
+      <Portal destination='mobile-header-portal'>
+        <HeaderPortalTitle title='درباره ما' />
+      </Portal>
       <div className='relative z-0 w-full'>
         <Image
           className='h-[448px] w-full object-cover'
