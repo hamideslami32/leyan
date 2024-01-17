@@ -1,9 +1,13 @@
 // Import Swiper React components
-import { ReactNode } from 'react';
+import { ReactNode, useRef } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperType } from 'swiper';
 
 // Import Swiper styles
-import 'swiper/swiper-bundle.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
@@ -28,8 +32,13 @@ const SwiperCarousel = (props: CustomSwiperCarouselProps) => {
     radius,
   } = props;
 
+  const swiperRef = useRef<SwiperType>();
+
   return (
     <Swiper
+      onBeforeInit={swiper => {
+        swiperRef.current = swiper;
+      }}
       // breakpoints={breakpoints}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
@@ -45,21 +54,17 @@ const SwiperCarousel = (props: CustomSwiperCarouselProps) => {
         showPagination && {
           clickable: true,
         }
-      }
-      navigation={{
-        prevEl: `#prev`,
-        nextEl: `#next`,
-      }}>
+      }>
       {showNavigation && (
         <>
           <RightArrowCircle
-            id='prev'
+            onClick={() => swiperRef.current?.slidePrev()}
             width='40'
             height='40'
             className='absolute right-6 top-1/2 z-10 -translate-y-1/2 cursor-pointer text-white'
           />
           <LeftArrowCircle
-            id='next'
+            onClick={() => swiperRef.current?.slideNext()}
             width='40'
             height='40'
             className='absolute left-6 top-1/2 z-10 -translate-y-1/2 cursor-pointer text-white'
