@@ -1,7 +1,10 @@
 import ProfileLayout from '@/layouts/profile';
 import SearchIcon from '@/assets/icons/search.svg';
 import { Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react';
-import Table from '@/components/shared/table/Table';
+
+import dynamic from 'next/dynamic';
+
+const Table = dynamic(() => import('../../components/shared/table/Table'));
 
 const tableHeaders = [
   'شماره تراکنش',
@@ -14,14 +17,14 @@ const tableHeaders = [
 const tableData = [
   {
     transactionId: '۵۲۳۵۰۰۱۳۹',
-    date: new Date().getTime(),
+    date: '2023/12/20',
     price: '۱,۵۰۰,۰۰۰',
     transactionType: 'افزایش شارژ / اعتبار بابت استرداد',
     description: 'درخواست استرداد به شماره ۴۲۳۵۲۳ و شماره سفارش ۱۲۵۲۳۵۶۲۳۰۰',
   },
   {
     transactionId: '۵۲۳۵۰۰۱۴۰',
-    date: new Date().getTime(),
+    date: '2023/12/15',
     price: '۱,۵۰۰,۰۰۰',
     transactionType: 'کاهش شارژ بابت خرید',
     description: 'سفارش ۱۴۲۵۱۵۰۰۲ - خرید کالا',
