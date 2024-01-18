@@ -17,11 +17,11 @@ const About = () => {
           alt='test'
         />
         <div className='absolute inset-0 z-[1] flex flex-col items-stretch justify-end p-6 text-white'>
-          <div className='mx-auto w-full max-w-screen-xl'>
+          <div className='mx-auto w-full max-w-cs'>
             <h1 className='mb-3 text-3xl font-extrabold lg:text-5xl'>
               گروه تجارت الکترونیک نوژن
             </h1>
-            <p>
+            <p className='text-justify'>
               گروه تجارت الکترونیک نوژن‌ اکنون به اکوسیستمی کامل برای تمامی
               کسب‌وکارهای آنلاین تبدیل شده است. رویکرد گروه نوژن‌ تکمیل زنجیره
               خلق ارزش برای اقتصاد دیجیتال ایران بوده و در این مسیر، زیرساخت‌های
@@ -31,11 +31,11 @@ const About = () => {
         </div>
       </div>
       <div className='px-6 py-16'>
-        <div className='mx-auto w-full max-w-screen-xl'>
+        <div className='mx-auto w-full max-w-cs'>
           <div className='flex w-full flex-col items-stretch gap-8'>
             <section>
               <h3 className='mb-2.5 text-lg font-bold'>خدمات پس از فروش</h3>
-              <p className='text-secondary-600'>
+              <p className='text-justify text-secondary-600'>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
                 استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
@@ -73,7 +73,7 @@ const About = () => {
             </section>
             <section>
               <h3 className='mb-2.5 text-lg font-bold'>مرکز امور مشتریان</h3>
-              <p className='text-secondary-600'>
+              <p className='text-justify text-secondary-600'>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
                 استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
