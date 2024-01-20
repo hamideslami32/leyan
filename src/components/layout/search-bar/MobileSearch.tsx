@@ -49,11 +49,11 @@ const MobileSearch = () => {
           <ModalBody px={4}>
             <div>
               <SearchInput isOpen={isOpen} setIsOpen={setIsOpen} />
-              <Link className='flex flex-col'>
+              <Link className='flex flex-col rounded-lg py-4'>
                 <img
                   alt='search-banner'
                   src='/images/search-sample.png'
-                  className='rounded-lg object-cover py-4'
+                  className='rounded-lg object-cover'
                 />
               </Link>
               <div className='my-4'>

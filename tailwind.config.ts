@@ -24,6 +24,9 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      boxShadow: {
+        cs: '0px 0px 80px -24px #0F0F0F29',
+      },
     },
   },
   plugins: [],

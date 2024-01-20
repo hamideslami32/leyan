@@ -8,11 +8,16 @@ import {
 } from '@chakra-ui/react';
 
 import QuestionIcon from '@/assets/icons/question.svg';
+import Portal from '@/utils/portal';
+import HeaderPortalTitle from '@/components/shared/header-portal-title/HeaderPortalTitle';
 
 const FAQ = () => {
   return (
     <div className='px-6 pb-32 pt-14 leading-7'>
-      <div className='mx-auto w-full max-w-screen-xl'>
+      <Portal destination='mobile-header-portal'>
+        <HeaderPortalTitle title='پرسش های متداول' />
+      </Portal>
+      <div className='mx-auto w-full max-w-cs'>
         <div className='mb-14'>
           <p className='mb-2.5 text-lg font-bold'>عنوان متن در اینجا</p>
           <p className='text-secondary-600'>

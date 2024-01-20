@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import MobileSearch from '@/components/layout/search-bar/MobileSearch';
 import BestSellers from '@/components/pages/home/best-sellers/BestSellers';
 import Swiper from '@/components/shared/swiper/Swiper';
 import ExpandableText from '@/components/shared/ui/expandable-text/ExpandableText';
+import Portal from '@/utils/portal';
 import { Heading } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,6 +24,9 @@ const MainCategoryLanding = () => {
 
   return (
     <div className='py-4'>
+      <Portal destination='mobile-header-portal'>
+        <MobileSearch />
+      </Portal>
       <div className='mx-auto w-full max-w-cs'>
         <div className='mb-8 rounded-lg px-4 md:px-0'>
           <Swiper

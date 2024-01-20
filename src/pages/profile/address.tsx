@@ -1,5 +1,7 @@
+import ProfileLayout from '@/layouts/profile';
+
 const Address = () => {
-  return <div>Address</div>;
+  return <ProfileLayout>Address</ProfileLayout>;
 };
 
 export default Address;

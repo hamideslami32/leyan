@@ -1,8 +1,13 @@
+import HeaderPortalTitle from '@/components/shared/header-portal-title/HeaderPortalTitle';
+import Portal from '@/utils/portal';
 import Image from 'next/image';
 
 const FactorResult = () => {
   return (
     <div className='mx-auto my-16 grid max-w-cs place-items-center'>
+      <Portal destination='mobile-header-portal'>
+        <HeaderPortalTitle title='وضعیت سفارش' />
+      </Portal>
       <Image
         src={'/images/success-purchase.png'}
         width={176}

@@ -31,6 +31,8 @@ import SortIcon from '@/assets/icons/sort.svg';
 import FilterIcon from '@/assets/icons/filter.svg';
 import TrashIcon from '@/assets/icons/trash.svg';
 import SearchIcon from '@/assets/icons/search.svg';
+import Portal from '@/utils/portal';
+import MobileSearch from '@/components/layout/search-bar/MobileSearch';
 
 const breadcrumbData = [
   {
@@ -65,6 +67,9 @@ const ProductList = () => {
 
   return (
     <>
+      <Portal destination='mobile-header-portal'>
+        <MobileSearch />
+      </Portal>
       <div className='h-12 border-b bg-white md:hidden'>
         <Button variant={'text'} leftIcon={<FilterIcon />}>
           فیلترها

@@ -32,6 +32,11 @@
   width: auto !important;
 }
 
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+}
+
 .swiper-pagination-bullet {
   transition: width 0.6s;
   border-radius: 8px !important;

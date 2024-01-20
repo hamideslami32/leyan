@@ -1,0 +1,44 @@
+.table caption,
+.table td,
+.table th {
+  padding: 16px;
+}
+
+.table td {
+    font-size: 14px;
+}
+
+.table th {
+    text-align: right;
+    background-color: #F4F6F8;
+}
+
+.table tr:nth-of-type(2n) {
+    border-bottom: 1px solid #ebebeb
+}
+
+@media (max-width: 650px) {
+    .table th {
+        display: none;
+    }
+
+    .table td {
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 15ch auto;
+        padding: 8px 16px;
+    }
+
+    .table td:first-child {
+        padding-top: 32px;
+    }
+    .table td:last-child {
+        padding-bottom: 32px;
+    }
+
+    .table td::before {
+        content: attr(data-cell) ": ";
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}

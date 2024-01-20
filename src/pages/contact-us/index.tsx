@@ -9,10 +9,15 @@ import {
   Textarea,
   Select,
 } from '@chakra-ui/react';
+import Portal from '@/utils/portal';
+import HeaderPortalTitle from '@/components/shared/header-portal-title/HeaderPortalTitle';
 
 const ContactUs = () => {
   return (
     <div className='p-6'>
+      <Portal destination='mobile-header-portal'>
+        <HeaderPortalTitle title='تماس با ما' />
+      </Portal>
       <div className='mx-auto max-w-cs'>
         <form className='mb-14 rounded-lg border border-solid border-secondary-300 p-6'>
           <h1 className='mb-2.5 text-2xl font-bold text-secondary-700'>

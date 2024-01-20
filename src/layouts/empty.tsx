@@ -1,8 +1,8 @@
 import { LayoutProps } from '.';
 
-const empty = (props: LayoutProps) => {
+const Empty = (props: LayoutProps) => {
   const { children } = props;
   return <main>{children}</main>;
 };
 
-export default empty;
+export default Empty;

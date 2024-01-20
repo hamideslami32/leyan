@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import MobileSearch from '@/components/layout/search-bar/MobileSearch';
 import BestSellers, {
   products,
 } from '@/components/pages/home/best-sellers/BestSellers';
@@ -9,6 +10,7 @@ import CustomCarousel from '@/components/shared/custom-carousel/CustomCarousel';
 import ProductCard from '@/components/shared/product-card/ProductCard';
 import Swiper from '@/components/shared/swiper/Swiper';
 import { useWindowSize } from '@/utils/hooks/useWindowSize';
+import Portal from '@/utils/portal';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode, useMemo } from 'react';
@@ -28,7 +30,7 @@ const Home = () => {
         <img
           src='/images/home/banner.png'
           alt='banner'
-          className='!h-auto !w-full rounded-lg object-cover'
+          className='!h-auto rounded-lg object-cover'
         />
       </Link>
     ));
@@ -36,6 +38,9 @@ const Home = () => {
 
   return (
     <div className='py-4'>
+      <Portal destination='mobile-header-portal'>
+        <MobileSearch />
+      </Portal>
       <div className='mx-auto w-full max-w-cs'>
         <div className='mb-8 rounded-lg px-4 md:px-0'>
           <Swiper
