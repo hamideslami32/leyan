@@ -14,7 +14,8 @@ import {
 import AddressDetail from '@/components/shared/address-detail/AddressDetail';
 import { useState } from 'react';
 import AddressLocation from '@/components/shared/address-location/AddressLocation';
-import Map from '@/components/shared/map/Map';
+import dynamic from 'next/dynamic';
+const Map = dynamic(() => import('../../shared/map/Map'), { ssr: false });
 
 const EmptyAddress = () => {
   const [step, setStep] = useState(1);
