@@ -7,48 +7,36 @@ import GardeningEquipmentIcon from '@/assets/icons/gardening-equipment.svg';
 import GardeningMachineryIcon from '@/assets/icons/gardening-machinery.svg';
 import SoilIcon from '@/assets/icons/soil.svg';
 import SeedsIcon from '@/assets/icons/seeds.svg';
-import PesticidesIcon from '@/assets/icons/pesticides.svg';
-import GardenFurnitureIcon from '@/assets/icons/garden-furniture.svg';
 
 export const mainCategories = [
   {
     icon: <FarmingEquipmentIcon />,
-    title: 'ادوات کشاورزی',
+    title: 'طلا',
     link: '',
   },
   {
     icon: <FarmingMachineryIcon />,
-    title: 'ماشین‌آلات کشاورزی',
+    title: 'پلاتین',
     link: '',
   },
   {
     icon: <GardeningEquipmentIcon />,
-    title: 'ادوات باغبانی',
+    title: 'نقره',
     link: '',
   },
   {
     icon: <GardeningMachineryIcon />,
-    title: 'ماشین‌آلات باغبانی',
+    title: 'برلیان',
     link: '',
   },
   {
     icon: <SoilIcon />,
-    title: 'خاک و کود',
+    title: 'زمرد',
     link: '',
   },
   {
     icon: <SeedsIcon />,
-    title: 'بذر و تخم گیاهان',
-    link: '',
-  },
-  {
-    icon: <PesticidesIcon />,
-    title: 'سموم و آفت‌کش',
-    link: '',
-  },
-  {
-    icon: <GardenFurnitureIcon />,
-    title: 'مبلمان باغ و ویلا',
+    title: 'یاقوت',
     link: '',
   },
 ];
@@ -70,7 +58,7 @@ const MegaMenu = () => {
       <div className='flex-1'>
         <div className='px-6 py-8'>
           <Link href={'/'} className='flex gap-2 !text-primary-500'>
-            <span>همه محصولات ادوات کشاورزی</span>
+            <span>طلا گنجینه</span>
             <ArrowLeftIcon width='20' height='20' />
           </Link>
         </div>
@@ -84,16 +72,15 @@ const MegaMenu = () => {
                   borderColor={'green'}
                   borderWidth={2}
                 />
-                <span>همه محصولات ادوات کشاورزی</span>
+                <span>طلا</span>
                 <ArrowLeftIcon width='20' height='20' />
               </Link>
               <div className='flex flex-col gap-5 text-sm text-gray-500'>
-                <Link href={'/'}>همه محصولات ادوات کشاورزی</Link>
-                <Link href={'/'}>همه محصولات ادوات کشاورزی</Link>
-                <Link href={'/'}>همه محصولات ادوات کشاورزی</Link>
-                <Link href={'/'}>همه محصولات ادوات کشاورزی</Link>
-                <Link href={'/'}>همه محصولات ادوات کشاورزی</Link>
-                <Link href={'/'}>همه محصولات ادوات کشاورزی</Link>
+                {[...Array(5)].map((_, i) => (
+                  <Link href={'/'} key={i}>
+                    شمش ۵۰ گرمی
+                  </Link>
+                ))}
               </div>
             </div>
           ))}

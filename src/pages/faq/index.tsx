@@ -44,29 +44,18 @@ const FAQ = () => {
             <AccordionItem>
               <AccordionButton>
                 <Box as='span' flex='1' textAlign='right'>
-                  بلیط پرواز چه کشورها و ایرلاین‌هایی را می‌توانم در سایت
-                  خریداری کنم؟
+                  لورم ایپسوم
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
 
-              <AccordionPanel pb={4}>
-                بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
-                پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای داخلی
-                دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل لوفت‌هانزا،
-                امارات، قطرایرویز، ترکیش‌ایر، ایرفرانس، کی‌ال‌ام، آئروفلوت،
-                آلیتالیا، اوکراینی، ایرایژیا، پگاسوس و ده‌ها ایرلاین دیگر در
-                علی‌بابا قابل تهیه هستند. همچنین بلیط پروازهای خارجیِ شرکت های
-                هواپیمایی داخلی مانند ماهان، ایران‌ایر، قشم ایر، آتا و .. نیز
-                روی سایت علی‌بابا به فروش می‌رسد.
-              </AccordionPanel>
+              <AccordionPanel pb={4}>لورم ایپسوم</AccordionPanel>
             </AccordionItem>
 
             <AccordionItem>
               <AccordionButton>
                 <Box as='span' flex='1' textAlign='right'>
-                  برای خرید بلیط ایرلاین‌های خارجی نیازی به پرداخت ارزی خواهم
-                  داشت؟
+                  لورم ایپسوم
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
@@ -82,7 +71,7 @@ const FAQ = () => {
             <AccordionItem>
               <AccordionButton>
                 <Box as='span' flex='1' textAlign='right'>
-                  آیا ساعت، قیمت و دیگر مشخصات پروازها روی سایت قطعی است؟
+                  لورم ایپسوم{' '}
                 </Box>
                 <AccordionIcon />
               </AccordionButton>

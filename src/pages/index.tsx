@@ -28,9 +28,9 @@ const Home = () => {
     return [...new Array(5)].map((_, i) => (
       <Link href={'/'} key={i}>
         <img
-          src='/images/home/banner.png'
+          src={`/images/carousel-${i + 1}.jpg`}
           alt='banner'
-          className='!h-auto rounded-lg object-cover'
+          className='max-h-[400px] rounded-lg object-cover'
         />
       </Link>
     ));

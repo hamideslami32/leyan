@@ -41,7 +41,7 @@ const Footer = () => {
           <div className='my-6 h-[1px] bg-gray-300'></div>
           <div className='flex flex-wrap justify-between gap-6'>
             <div className='max-w-[65%]'>
-              <h3 className='mb-3 text-3xl'>پالیزبان</h3>
+              <h3 className='mb-3 text-3xl'>لیان</h3>
               <p className='text-sm leading-7 text-gray-600'>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
                 استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
@@ -76,8 +76,8 @@ const Footer = () => {
       </div>
       <div className='flex h-12 items-center bg-gray-100'>
         <div className='mx-auto max-w-cs text-center text-sm text-gray-600'>
-          کلیه حقوق این سایت متعلق به شرکت نوژن گستر گیل (پالیزبان) است و هر
-          گونه سواستفاده از آن پیگیری قانونی خواهد داشت.
+          کلیه حقوق این سایت متعلق به شرکت (لیان) است و هر گونه سواستفاده از آن
+          پیگیری قانونی خواهد داشت.
           <span className='mr-2'>{`version: ${packageData.version}`}</span>
         </div>
       </div>

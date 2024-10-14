@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import BasketButton from './BasketButton';
 import AuthButton from './AuthButton';
@@ -10,13 +9,7 @@ const Header = () => {
       <div className='mx-auto flex w-full max-w-cs justify-between'>
         <div className='hidden flex-1 items-center md:flex'>
           <Link href='/' className='ml-6 hidden items-center lg:flex'>
-            <Image
-              width='132'
-              height='33'
-              src={'/logo.svg'}
-              alt='logo'
-              draggable={false}
-            />
+            <span className='text-4xl font-bold'>لیان</span>
           </Link>
           <DesktopSearch />
         </div>

@@ -51,7 +51,7 @@ const Categories = () => {
                 className='flex items-center gap-2'
                 mb={6}
                 color={'primary.500'}>
-                <span>همه محصولات ادوات کشاورزی</span>
+                <span>طلا</span>
                 <ArrowLeftIcon width='20' height='20' />
               </Link>
               <Accordion allowToggle>

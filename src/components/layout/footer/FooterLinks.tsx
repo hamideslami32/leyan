@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 const linksData = {
-  پالیزبان: [
+  لیان: [
     {
-      title: 'وبلاگ پالیزبان',
+      title: 'وبلاگ لیان',
       link: '/blog',
     },
     {
@@ -15,11 +15,11 @@ const linksData = {
       link: '/careers',
     },
     {
-      title: 'درباره پالیزبان',
+      title: 'درباره لیان',
       link: '/about',
     },
     {
-      title: 'تماس با پالیزبان',
+      title: 'تماس با لیان',
       link: '/contact-us',
     },
   ],

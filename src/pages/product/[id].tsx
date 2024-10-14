@@ -71,19 +71,19 @@ const tabbarProduct = [
 const breadcrumbData = [
   {
     link: '/',
-    title: 'پالیزبان',
+    title: 'لیان',
   },
   {
-    link: '/products/farming-equipment',
-    title: 'ادوات کشاورزی',
+    link: '/products/metal',
+    title: 'فلز',
   },
   {
-    link: '/products/farming-equipment/tractor-supply',
-    title: 'ملزومات تراکتور',
+    link: '/products/metal/gold',
+    title: 'طلا',
   },
   {
-    link: '/product/fluid-pump',
-    title: 'پمپ سیالات آبارا',
+    link: '/product/metal/gold/50-gram',
+    title: 'شمش طلای ۵۰ گرمی',
   },
 ];
 
@@ -150,10 +150,10 @@ const ProductDetailsPage = () => {
         <div className='flex flex-col items-center justify-between gap-8 rounded-xl bg-misc-400 px-4 py-4 md:flex-row md:px-8'>
           <div className='w-full space-y-3 md:w-[30%]'>
             <Text as='b' fontSize='4xl' color='white'>
-              خرید اقساطی تجهیزات و ادوات کشاورزی
+              خرید اقساطی تجهیزات و طلا
             </Text>
             <Text fontSize='sm' color='secondary.600'>
-              از پالیزبان اعتبار بگیرید و آنلاین خرید کنید!
+              از لیان اعتبار بگیرید و آنلاین خرید کنید!
             </Text>
           </div>
           <div className='w-full space-y-4 md:w-[30%]'>
@@ -250,7 +250,7 @@ const ProductDetailsPage = () => {
               bg='secondary.100'>
               <div className='flex items-center gap-3'>
                 <Image
-                  src='/images/product-sample-2.png'
+                  src='/images/product-sample-2.jpg'
                   alt='product-sample'
                   width={700}
                   height={0}
@@ -258,20 +258,14 @@ const ProductDetailsPage = () => {
                 />
                 <div className='w-calc[100%-150px-0.75rem] flex flex-col gap-4'>
                   <Text fontSize='lg' lineHeight={7}>
-                    الکتروپمپ پلی اتیلن 0.5 اسب بخار آبار پمپ مدل PM16
+                    شمش طلای ۵۰ گرمی
                   </Text>
-                  <div className='flex items-center gap-2'>
-                    <div className='h-6 w-6 rounded-full bg-blue-500'></div>
-                    <Text fontSize='sm' color='secondary.500'>
-                      رنگ آبی روشن
-                    </Text>
-                  </div>
                 </div>
               </div>
               <Divider color='secondary.400' />
               <div className='flex items-center gap-3'>
                 <ShopIcon />
-                <Text fontSize='lg'>فروشگاه نیرو ابزار</Text>
+                <Text fontSize='lg'>فروشگاه طلای زرین</Text>
                 <span className='rounded-full bg-success-500 px-4 py-1 text-white'>
                   <Text fontSize='sm'>منتخب</Text>
                 </span>

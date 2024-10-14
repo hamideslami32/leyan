@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Image from 'next/image';
 import { Divider, Text, Box, Button } from '@chakra-ui/react';
 
@@ -13,8 +12,6 @@ import SplitIcon from '@/assets/icons/split.svg';
 import BellIcon from '@/assets/icons/bell.svg';
 
 function ProductDetails() {
-  const [color, setColor] = useState<number>(0);
-
   return (
     <div className='flex flex-col gap-8 lg:flex-row'>
       <div className='flex w-full flex-col gap-8 lg:w-[70%] lg:flex-row'>
@@ -33,7 +30,7 @@ function ProductDetails() {
             </div>
             <div className='jsutify-center mx-auto flex w-[80%] items-center'>
               <Image
-                src='/images/product-sample.png'
+                src='/images/product-sample.webp'
                 alt='product-image'
                 width={1000}
                 height={0}
@@ -52,7 +49,7 @@ function ProductDetails() {
         </div>
         <div className='flex w-full flex-col gap-4 lg:w-[55%]'>
           <Text as='b' fontSize='xl' color='black'>
-            الکتروپمپ 0.5 اسب آبار پمپ مدل PM16
+            شمش طلای ۳۰ گرمی
           </Text>
           <div className='flex items-center gap-3'>
             <div className='flex items-center gap-2 text-secondary-600'>
@@ -70,38 +67,6 @@ function ProductDetails() {
           </div>
           <Divider color='secondary.300' />
           <div className='flex flex-col gap-10'>
-            <div className='space-y-4'>
-              <Text as='b' fontSize='lg' color='black'>
-                رنگ: آبی روشن
-              </Text>
-              <div className='flex items-center gap-2'>
-                <div
-                  className={`h-8 w-8 rounded-full border-2 border-white bg-blue-500 ${
-                    color == 0 ? 'outline outline-2 outline-black' : ''
-                  } cursor-pointer`}
-                  onClick={() => setColor(0)}></div>
-                <div
-                  className={`h-8 w-8 rounded-full border-2 border-white bg-blue-800 ${
-                    color == 1 ? 'outline outline-2 outline-black' : ''
-                  } cursor-pointer`}
-                  onClick={() => setColor(1)}></div>
-                <div
-                  className={`h-8 w-8 rounded-full border-2 border-white bg-misc-400 ${
-                    color == 2 ? 'outline outline-2 outline-black' : ''
-                  } cursor-pointer`}
-                  onClick={() => setColor(2)}></div>
-                <div
-                  className={`h-8 w-8 rounded-full border-2 border-white bg-error ${
-                    color == 3 ? 'outline outline-2 outline-black' : ''
-                  } cursor-pointer`}
-                  onClick={() => setColor(3)}></div>
-                <div
-                  className={`h-8 w-8 rounded-full border-2 border-white bg-black ${
-                    color == 4 ? 'outline outline-2 outline-black' : ''
-                  } cursor-pointer`}
-                  onClick={() => setColor(4)}></div>
-              </div>
-            </div>
             <div className='space-y-4'>
               <Text as='b' fontSize='lg' color='black'>
                 ویژگی‌ها
@@ -149,7 +114,7 @@ function ProductDetails() {
           <Divider color='secondary.300' />
           <div className='flex items-center gap-3'>
             <ShopIcon />
-            <Text fontSize='lg'>فروشگاه نیرو ابزار</Text>
+            <Text fontSize='lg'>فروشگاه طلای زرین</Text>
             <span className='rounded-full bg-success-500 px-4 py-1 text-white'>
               <Text fontSize='sm'>منتخب</Text>
             </span>

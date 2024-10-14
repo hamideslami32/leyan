@@ -36,23 +36,19 @@ const BasketButton = () => {
               </div>
               <div className='mt-10 flex'>
                 <img
-                  className='px-5'
-                  src='/images/product-sample-2.png'
+                  className='h-auto w-[170px] px-5'
+                  src='/images/product-sample-2.jpg'
                   alt='product-image'
                 />
                 <div className='flex-1'>
-                  <p>الکتروپمپ پلی اتیلن 0.5 اسب بخار آبارا پمپ مدل PM16</p>
-                  <div className='mt-3 flex items-center gap-2'>
-                    <p className='h-6 w-6 rounded-md bg-info'></p>
-                    <p className='text-sm text-gray-500'>رنگ آبی روشن</p>
-                  </div>
+                  <p>شمش طلای ۵۰ گرمی</p>
                 </div>
               </div>
             </div>
             <hr />
             <div className='flex !h-14 items-center gap-3'>
               <ShopIcon />
-              <span>فروشگاه نیرو ابزار</span>
+              <span>فروشگاه طلای زرین</span>
               <Badge
                 rounded={'full'}
                 bg='success.500'

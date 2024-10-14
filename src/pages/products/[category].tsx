@@ -36,15 +36,15 @@ import MobileSearch from '@/components/layout/search-bar/MobileSearch';
 
 const breadcrumbData = [
   {
-    title: 'پالیزبان',
+    title: 'لیان',
     link: '/',
   },
   {
-    title: 'ادوات کشاورزی',
+    title: 'طلا',
     link: '/categories/farming-equipment',
   },
   {
-    title: 'ملزومات تراکتور',
+    title: 'شمش ۵۰ گرمی',
     link: '/categories/farming-equipment/tractor-supply',
   },
 ];
@@ -93,7 +93,7 @@ const ProductList = () => {
           </Breadcrumb>
 
           <Heading as='h1' mb={6}>
-            ملزومات تراکتور
+            شمش ۵۰ گرمی
           </Heading>
 
           <Box as='section' mb={6}>
@@ -179,17 +179,7 @@ const ProductList = () => {
                       <AccordionIcon />
                     </AccordionButton>
 
-                    <AccordionPanel>
-                      بلیط تمام خطوط هوایی دنیا در سایت علی‌بابا موجود است، چه
-                      پروازهایی که مبدا یا مقصد آنها ایران است و چه پروازهای
-                      داخلی دورترین کشورهای دنیا. پروازهای ایرلاین‌هایی مثل
-                      لوفت‌هانزا، امارات، قطرایرویز، ترکیش‌ایر، ایرفرانس،
-                      کی‌ال‌ام، آئروفلوت، آلیتالیا، اوکراینی، ایرایژیا، پگاسوس و
-                      ده‌ها ایرلاین دیگر در علی‌بابا قابل تهیه هستند. همچنین
-                      بلیط پروازهای خارجیِ شرکت های هواپیمایی داخلی مانند ماهان،
-                      ایران‌ایر، قشم ایر، آتا و .. نیز روی سایت علی‌بابا به فروش
-                      می‌رسد.
-                    </AccordionPanel>
+                    <AccordionPanel>lorem ipsom</AccordionPanel>
                   </AccordionItem>
                 </Accordion>
               </Stack>

@@ -74,27 +74,19 @@ const OrderDetail = () => {
               <div className='h-20 w-20 overflow-hidden rounded-md border'>
                 <Image
                   className='object-cover'
-                  src='/images/product-sample.png'
+                  src='/images/product-sample.webp'
                   width='80'
                   height='80'
                   alt='product-image'
                 />
               </div>
               <div className='w-calc[100%-150px-0.75rem] flex flex-col gap-4'>
-                <Text lineHeight={7}>
-                  الکتروپمپ پلی اتیلن 0.5 اسب بخار آبار پمپ مدل PM16
-                </Text>
-                <div className='flex items-center gap-2'>
-                  <div className='h-5 w-5 rounded-full bg-info'></div>
-                  <Text fontSize='sm' color='secondary.500'>
-                    رنگ آبی روشن
-                  </Text>
-                </div>
+                <Text lineHeight={7}>شمش طلای ۵۰ گرمی</Text>
               </div>
             </div>
             <div className='mr-[88px] flex items-center gap-3'>
               <ShopIcon />
-              <Text fontSize='sm'>فروشگاه نیرو ابزار</Text>
+              <Text fontSize='sm'>فروشگاه طلای زرین</Text>
               <span className='rounded-full bg-success-500 px-4 py-1 text-white'>
                 <Text fontSize='xs'>منتخب</Text>
               </span>

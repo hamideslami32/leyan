@@ -21,10 +21,10 @@ const ContactUs = () => {
       <div className='mx-auto max-w-cs'>
         <form className='mb-14 rounded-lg border border-solid border-secondary-300 p-6'>
           <h1 className='mb-2.5 text-2xl font-bold text-secondary-700'>
-            تماس با پالیزبان
+            تماس با لیان
           </h1>
           <p className='text-secondary-600'>
-            لطفا پیش از تماس با پالیزبان، بابت دریافت سوال خود ابتدا{' '}
+            لطفا پیش از تماس با لیان، بابت دریافت سوال خود ابتدا{' '}
             <Link href='/faq' className='text-primary'>
               پرسش های متداول
             </Link>{' '}

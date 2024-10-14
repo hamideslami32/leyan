@@ -35,18 +35,14 @@ const OrderCard = () => {
         <div className=' h-20 w-20 overflow-hidden rounded-md border'>
           <Image
             className='object-cover'
-            src='/images/product-sample.png'
+            src='/images/product-sample.webp'
             width='80'
             height='80'
             alt='product-image'
           />
         </div>
         <div>
-          <p>الکتروپمپ پلی اتیلن 0.5 اسب بخار آبار پمپ مدل PM16</p>
-          <p className='mt-2 flex items-center text-sm text-secondary-500'>
-            <span className='ml-2 inline-block h-4 w-4 rounded-full bg-info'></span>
-            رنگ آبی روشن
-          </p>
+          <p>شمش طلای ۵۰ گرمی</p>
         </div>
       </div>
     </div>

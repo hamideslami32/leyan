@@ -10,7 +10,7 @@ const links = [
   { link: '#', title: 'تخفیف‌های ویژه', icon: '' },
   { link: '#', title: 'پرفروش‌ترین‌ها', icon: '' },
   { link: '#', title: 'خرید اقساطی', icon: '' },
-  { link: '#', title: 'مجله پالیزبان', icon: '' },
+  { link: '#', title: 'مجله لیان', icon: '' },
   { link: '#', title: 'فروشنده شوید!', icon: '' },
 ];
 

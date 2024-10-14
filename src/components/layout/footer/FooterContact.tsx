@@ -6,37 +6,39 @@ import Link from 'next/link';
 
 const FooterContact = () => {
   return (
-    <div className='flex-1 flex flex-col gap-4 mr-16'>
-      <div className='font-bold text-lg'>
+    <div className='mr-16 flex flex-1 flex-col gap-4'>
+      <div className='text-lg font-bold'>
         هفت روز هفته، میزبان صدای گرم شما هستیم!
       </div>
       <div className='text-sm'>
-        <span className='text-gray-600 ml-2'>تلفن:</span>
-        <span className='font-bold'>۰۲۱ - ۵۱۲۰۰۸۹۳</span>
+        <span className='ml-2 text-gray-600'>تلفن:</span>
+        <span className='font-bold' dir='ltr'>
+          ۰۲۱ - ۱۲۳۴۵۶۷۸
+        </span>
       </div>
       <div className='text-sm'>
-        <span className='text-gray-600 ml-2'>ایمیل:</span>
-        <span className='font-bold'>info@agribazzar.ir</span>
+        <span className='ml-2 text-gray-600'>ایمیل:</span>
+        <span className='font-bold'>info@leyan.org</span>
       </div>
       <div className='flex gap-1'>
         <Link
           href='/'
-          className='border border-gray-300 w-10 h-10 flex justify-center items-center'>
+          className='flex h-10 w-10 items-center justify-center border border-gray-300'>
           <TwitterIcon />
         </Link>
         <Link
           href='/'
-          className='border border-gray-300 w-10 h-10 flex justify-center items-center'>
+          className='flex h-10 w-10 items-center justify-center border border-gray-300'>
           <LinkedinIcon />
         </Link>
         <Link
           href='/'
-          className='border border-gray-300 w-10 h-10 flex justify-center items-center'>
+          className='flex h-10 w-10 items-center justify-center border border-gray-300'>
           <InstagramIcon />
         </Link>
         <Link
           href='/'
-          className='border border-gray-300 w-10 h-10 flex justify-center items-center'>
+          className='flex h-10 w-10 items-center justify-center border border-gray-300'>
           <YoutubeIcon />
         </Link>
       </div>

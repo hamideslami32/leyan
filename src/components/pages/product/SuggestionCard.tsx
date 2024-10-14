@@ -9,7 +9,7 @@ function SuggestionCard() {
       <div className='space-y-3'>
         <div className='flex items-center gap-3'>
           <ShopIcon />
-          <Text fontSize='lg'>فروشگاه نیرو ابزار (تهران)</Text>
+          <Text fontSize='lg'>فروشگاه طلای زرین (تهران)</Text>
           <span className='rounded-full bg-success-500 px-4 py-1 text-white'>
             <Text fontSize='sm'>منتخب</Text>
           </span>

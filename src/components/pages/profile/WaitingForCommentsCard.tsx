@@ -8,13 +8,13 @@ const WaitingForCommentsCard = () => {
         <div className='h-20 w-20 overflow-hidden rounded-md border'>
           <Image
             className='object-cover'
-            src='/images/product-sample.png'
+            src='/images/product-sample.webp'
             width='80'
             height='80'
             alt='product-image'
           />
         </div>
-        <p>الکتروپمپ پلی اتیلن 0.5 اسب بخار آبار پمپ مدل PM16</p>
+        <p>شمش طلای ۵۰ گرمی</p>
       </div>
       <Button variant={'outline'}>ثبت دیدگاه</Button>
     </div>

@@ -19,7 +19,7 @@ export const lastSearchData: LinkType[] = [
     link: '/',
   },
   {
-    title: 'ملزومات تراکتور',
+    title: 'شمش ۵۰ گرمی',
     link: '/',
   },
   {
@@ -31,7 +31,7 @@ export const lastSearchData: LinkType[] = [
     link: '/',
   },
   {
-    title: 'ملزومات تراکتور',
+    title: 'شمش ۵۰ گرمی',
     link: '/',
   },
   {
@@ -46,7 +46,7 @@ export const mostPopularData: LinkType[] = [
     link: '/',
   },
   {
-    title: 'ملزومات تراکتور',
+    title: 'شمش ۵۰ گرمی',
     link: '/',
   },
   {

@@ -41,7 +41,7 @@ const ProductCard = (props: ProductCardProps) => {
       <div className='h-[55%]'>
         <img
           alt='product-1'
-          src='/images/product-sample.png'
+          src='/images/product-sample.webp'
           className='mx-auto max-h-full rounded-t-md object-scale-down'
         />
       </div>
@@ -66,12 +66,12 @@ const ProductCard = (props: ProductCardProps) => {
           <div className='flex flex-col'>
             <span className='text-sm'>
               <span className='ml-1 text-lg font-bold md:text-xl'>
-                {productData.finalPrice}
+                {productData.finalPrice.toLocaleString('fa')}
               </span>
               تومان
             </span>
             <span className='text-gray-600 line-through'>
-              {productData.price}
+              {productData.price.toLocaleString('fa')}
             </span>
           </div>
         </div>

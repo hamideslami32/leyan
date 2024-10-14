@@ -19,22 +19,16 @@ const BasketItem = () => {
       <div className='flex h-28 w-28 rounded-md border p-2'>
         <img
           alt='product-1'
-          src='/images/product-sample.png'
+          src='/images/product-sample.webp'
           className='max-h-full object-scale-down'
         />
       </div>
       <div className='flex-1'>
-        <div className='font-bold md:text-lg'>
-          الکتروپمپ پلی اتیلن 0.5 اسب بخار آبار پمپ مدل PM16
-        </div>
+        <div className='font-bold md:text-lg'>شمش طلای ۵۰ گرمی</div>
         <div className='my-6 flex flex-col gap-2 text-sm text-secondary-600'>
           <div className='flex items-center gap-1'>
-            <span className='inline-block h-4 w-4 rounded-full bg-info'></span>
-            <span>رنگ آبی روشن</span>
-          </div>
-          <div className='flex items-center gap-1'>
             <ShopIcon width='16' height='16' />
-            <span>فروشگاه نیرو ابزار</span>
+            <span>فروشگاه طلای زرین</span>
             <Badge
               rounded={'full'}
               bg='success.500'
